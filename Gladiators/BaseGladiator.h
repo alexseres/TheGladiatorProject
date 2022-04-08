@@ -1,0 +1,14 @@
+//
+// Created by Alex Seres on 08/04/2022.
+//
+
+#ifndef THEGLADIATORPROJECT_BASEGLADIATOR_H
+#define THEGLADIATORPROJECT_BASEGLADIATOR_H
+
+
+class BaseGladiator {
+
+};
+
+
+#endif //THEGLADIATORPROJECT_BASEGLADIATOR_H
