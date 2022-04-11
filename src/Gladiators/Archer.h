@@ -9,7 +9,12 @@
 #include "BaseGladiator.h"
 
 class Archer : public BaseGladiator{
+////    //constructor inheritance, bloody amazing
+//    using BaseGladiator::BaseGladiator;
+private:
 
+public:
+    Archer(string name): BaseGladiator(name){ Type = "Archer"; FullName = Type + " " + Name; }
 };
 
 

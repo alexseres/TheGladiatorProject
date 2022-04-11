@@ -4,6 +4,3 @@
 
 #include "Archer.h"
 
-string BaseGladiator::getName() {
-    return (string)typeid(Archer).name() + " " + Name;
-}

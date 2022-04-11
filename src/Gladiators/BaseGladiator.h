@@ -9,12 +9,16 @@ using namespace std;
 
 
 class BaseGladiator {
-private:
-    string Name;
-
+protected:
+    const string Name;
+    string FullName;
+    string Type;
 public:
-    BaseGladiator();
-    string getName();
+
+    BaseGladiator(string name): Name(name){}
+
+
+
 };
 
 
