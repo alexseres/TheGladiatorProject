@@ -1,0 +1,5 @@
+if(EXISTS "/Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/cmake-build-debug/test/BaseGladiatorTest[1]_tests.cmake")
+  include("/Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/cmake-build-debug/test/BaseGladiatorTest[1]_tests.cmake")
+else()
+  add_test(BaseGladiatorTest_NOT_BUILT BaseGladiatorTest_NOT_BUILT)
+endif()
