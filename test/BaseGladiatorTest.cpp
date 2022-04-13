@@ -7,6 +7,7 @@
 
 
 //first argument is a group name and the second you can specify the test
-TEST(GladiatorTest, test1){
-
+TEST(BaseGladiatorTests, test1){
+    int res = 1;
+    EXPECT_EQ(res, 1);
 }

@@ -24,8 +24,7 @@
 		[
 			"cmake-build-debug/_deps/googletest-src/googletest/cmake/internal_utils.cmake",
 			"cmake-build-debug/_deps/googletest-src/googlemock/CMakeLists.txt",
-			"CMakeLists.txt",
-			"test/CMakeLists.txt"
+			"CMakeLists.txt"
 		],
 		"nodes" : 
 		[
@@ -78,15 +77,6 @@
 				"parent" : 7
 			},
 			{
-				"file" : 3
-			},
-			{
-				"command" : 6,
-				"file" : 3,
-				"line" : 3,
-				"parent" : 9
-			},
-			{
 				"command" : 6,
 				"file" : 1,
 				"line" : 79,
@@ -122,24 +112,20 @@
 					"path" : "/Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/src"
 				},
 				{
-					"backtrace" : 10,
-					"path" : "/Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/test/test"
-				},
-				{
-					"backtrace" : 11,
+					"backtrace" : 9,
 					"path" : "/Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/cmake-build-debug/_deps/googletest-src/googlemock/include"
 				},
 				{
-					"backtrace" : 11,
+					"backtrace" : 9,
 					"path" : "/Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/cmake-build-debug/_deps/googletest-src/googlemock"
 				},
 				{
-					"backtrace" : 11,
+					"backtrace" : 9,
 					"isSystem" : true,
 					"path" : "/Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/cmake-build-debug/_deps/googletest-src/googletest/include"
 				},
 				{
-					"backtrace" : 11,
+					"backtrace" : 9,
 					"isSystem" : true,
 					"path" : "/Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/cmake-build-debug/_deps/googletest-src/googletest"
 				}
@@ -149,7 +135,7 @@
 			{
 				"backtraces" : 
 				[
-					12
+					10
 				],
 				"standard" : "14"
 			},

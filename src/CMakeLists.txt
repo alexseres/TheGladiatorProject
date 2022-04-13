@@ -1,9 +1,3 @@
-set(BINARY ${TheGladiatorProject})
-
-file(GLOB_RECURSE SOURCES LIST_DIRECTORIES true *.h *.cpp)
-
-set(SOURCES ${SOURCES})
-
-add_executable(${BINARY}_run ${SOURCES})
-
-add_library(${BINARY}_lib STATIC ${SOURCES})
+cmake_minimum_required(VERSION 3.21)
+project(TheGladiatorProject)
+include_directories(Gladiators)

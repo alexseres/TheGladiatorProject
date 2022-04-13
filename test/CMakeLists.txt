@@ -1,11 +1,10 @@
 cmake_minimum_required(VERSION 3.21)
 project(TheGladiatorProject)
-include_directories(test)
 include(FetchContent)
 
 FetchContent_Declare(
-        googletest
-        URL https://github.com/google/googletest/archive/609281088cfefc76f9d0ce82e1ff6c30cc3591e5.zip
+    googletest
+    URL https://github.com/google/googletest/archive/609281088cfefc76f9d0ce82e1ff6c30cc3591e5.zip
 )
 
 FetchContent_MakeAvailable(googletest)
@@ -15,19 +14,20 @@ FetchContent_MakeAvailable(googletest)
 
 enable_testing()
 
-add_executable(
-    BaseGladiatorTest
-    BaseGladiatorTest.cpp
+add_executable(BaseGladiatorTest BaseGladiatorTest.cpp ../src/Gladiators/BaseGladiator.cpp)
+add_executable(UtilsTest UtilsTest.cpp ../src/Utils.cpp)
 
-)
+target_link_libraries(BaseGladiatorTest gtest_main)
+target_link_libraries(UtilsTest gtest_main)
 
-target_link_libraries(
-    BaseGladiatorTest
-    gtest_main
-)
+add_test(NAME BaseGladiatorTest COMMAND test1)
+add_test(NAME util_t COMMAND randomNumberTest)
 
-include(GoogleTest)
-gtest_discover_tests(BaseGladiatorTest)
+#include(GoogleTest)
+#gtest_discover_tests(
+#    BaseGladiatorTest
+#    UtilsTest
+#)
 
 # the above config enables testing in CMake, declares the c++ test binary you want to build (BaseGladiator/test)
 # and links it to GoogleTest (gtest_main). The last two lines enable Cmake's test runner to discover the tests

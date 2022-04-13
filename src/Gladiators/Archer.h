@@ -7,14 +7,18 @@
 
 
 #include "BaseGladiator.h"
+#include "StatisticMultiplier.cpp"
 
 class Archer : public BaseGladiator{
-////    //constructor inheritance, bloody amazing
-//    using BaseGladiator::BaseGladiator;
 private:
-
 public:
-    Archer(string name): BaseGladiator(name){ Type = "Archer"; FullName = Type + " " + Name; }
+    Archer(string name): BaseGladiator(name){
+        Type = "Archer";
+        FullName = Type + " " + Name;
+        hp_multiplier = Medium;
+        sp_multiplier = Medium;
+        dex_multiplier = High;
+    }
 };
 
 

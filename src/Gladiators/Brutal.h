@@ -9,7 +9,14 @@
 #include "BaseGladiator.h"
 
 class Brutal : public BaseGladiator{
-
+public:
+    Brutal(string name): BaseGladiator(name){
+        Type = "Brutal";
+        FullName = Type + " " + Name;
+        hp_multiplier = High;
+        sp_multiplier = High;
+        dex_multiplier = Low;
+    }
 };
 
 

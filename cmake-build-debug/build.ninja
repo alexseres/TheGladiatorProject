@@ -112,6 +112,18 @@ build edit_cache: phony CMakeFiles/edit_cache.util
 
 
 #############################################
+# Utility command for install/local
+
+build src/CMakeFiles/install/local.util: CUSTOM_COMMAND src/all
+  COMMAND = cd /Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/cmake-build-debug/src && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+  DESC = Installing only the local directory...
+  pool = console
+  restat = 1
+
+build src/install/local: phony src/CMakeFiles/install/local.util
+
+
+#############################################
 # Utility command for install/strip
 
 build src/CMakeFiles/install/strip.util: CUSTOM_COMMAND src/all
@@ -162,181 +174,6 @@ build src/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
   restat = 1
 
 build src/edit_cache: phony src/CMakeFiles/edit_cache.util
-
-# =============================================================================
-# Object build statements for STATIC_LIBRARY target _lib
-
-
-#############################################
-# Order-only phony target for _lib
-
-build cmake_object_order_depends_target__lib: phony || src/CMakeFiles/_lib.dir
-
-build src/CMakeFiles/_lib.dir/GladiatorFactory.cpp.o: CXX_COMPILER___lib_Debug /Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/src/GladiatorFactory.cpp || cmake_object_order_depends_target__lib
-  DEP_FILE = src/CMakeFiles/_lib.dir/GladiatorFactory.cpp.o.d
-  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -mmacosx-version-min=10.15 -std=gnu++14
-  INCLUDES = -I/Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/src
-  OBJECT_DIR = src/CMakeFiles/_lib.dir
-  OBJECT_FILE_DIR = src/CMakeFiles/_lib.dir
-
-build src/CMakeFiles/_lib.dir/Gladiators/Archer.cpp.o: CXX_COMPILER___lib_Debug /Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/src/Gladiators/Archer.cpp || cmake_object_order_depends_target__lib
-  DEP_FILE = src/CMakeFiles/_lib.dir/Gladiators/Archer.cpp.o.d
-  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -mmacosx-version-min=10.15 -std=gnu++14
-  INCLUDES = -I/Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/src
-  OBJECT_DIR = src/CMakeFiles/_lib.dir
-  OBJECT_FILE_DIR = src/CMakeFiles/_lib.dir/Gladiators
-
-build src/CMakeFiles/_lib.dir/Gladiators/Assassin.cpp.o: CXX_COMPILER___lib_Debug /Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/src/Gladiators/Assassin.cpp || cmake_object_order_depends_target__lib
-  DEP_FILE = src/CMakeFiles/_lib.dir/Gladiators/Assassin.cpp.o.d
-  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -mmacosx-version-min=10.15 -std=gnu++14
-  INCLUDES = -I/Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/src
-  OBJECT_DIR = src/CMakeFiles/_lib.dir
-  OBJECT_FILE_DIR = src/CMakeFiles/_lib.dir/Gladiators
-
-build src/CMakeFiles/_lib.dir/Gladiators/BaseGladiator.cpp.o: CXX_COMPILER___lib_Debug /Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/src/Gladiators/BaseGladiator.cpp || cmake_object_order_depends_target__lib
-  DEP_FILE = src/CMakeFiles/_lib.dir/Gladiators/BaseGladiator.cpp.o.d
-  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -mmacosx-version-min=10.15 -std=gnu++14
-  INCLUDES = -I/Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/src
-  OBJECT_DIR = src/CMakeFiles/_lib.dir
-  OBJECT_FILE_DIR = src/CMakeFiles/_lib.dir/Gladiators
-
-build src/CMakeFiles/_lib.dir/Gladiators/Brutal.cpp.o: CXX_COMPILER___lib_Debug /Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/src/Gladiators/Brutal.cpp || cmake_object_order_depends_target__lib
-  DEP_FILE = src/CMakeFiles/_lib.dir/Gladiators/Brutal.cpp.o.d
-  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -mmacosx-version-min=10.15 -std=gnu++14
-  INCLUDES = -I/Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/src
-  OBJECT_DIR = src/CMakeFiles/_lib.dir
-  OBJECT_FILE_DIR = src/CMakeFiles/_lib.dir/Gladiators
-
-build src/CMakeFiles/_lib.dir/Gladiators/Swordsman.cpp.o: CXX_COMPILER___lib_Debug /Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/src/Gladiators/Swordsman.cpp || cmake_object_order_depends_target__lib
-  DEP_FILE = src/CMakeFiles/_lib.dir/Gladiators/Swordsman.cpp.o.d
-  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -mmacosx-version-min=10.15 -std=gnu++14
-  INCLUDES = -I/Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/src
-  OBJECT_DIR = src/CMakeFiles/_lib.dir
-  OBJECT_FILE_DIR = src/CMakeFiles/_lib.dir/Gladiators
-
-build src/CMakeFiles/_lib.dir/Utils.cpp.o: CXX_COMPILER___lib_Debug /Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/src/Utils.cpp || cmake_object_order_depends_target__lib
-  DEP_FILE = src/CMakeFiles/_lib.dir/Utils.cpp.o.d
-  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -mmacosx-version-min=10.15 -std=gnu++14
-  INCLUDES = -I/Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/src
-  OBJECT_DIR = src/CMakeFiles/_lib.dir
-  OBJECT_FILE_DIR = src/CMakeFiles/_lib.dir
-
-build src/CMakeFiles/_lib.dir/main.cpp.o: CXX_COMPILER___lib_Debug /Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/src/main.cpp || cmake_object_order_depends_target__lib
-  DEP_FILE = src/CMakeFiles/_lib.dir/main.cpp.o.d
-  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -mmacosx-version-min=10.15 -std=gnu++14
-  INCLUDES = -I/Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/src
-  OBJECT_DIR = src/CMakeFiles/_lib.dir
-  OBJECT_FILE_DIR = src/CMakeFiles/_lib.dir
-
-
-# =============================================================================
-# Link build statements for STATIC_LIBRARY target _lib
-
-
-#############################################
-# Link the static library src/lib_lib.a
-
-build src/lib_lib.a: CXX_STATIC_LIBRARY_LINKER___lib_Debug src/CMakeFiles/_lib.dir/GladiatorFactory.cpp.o src/CMakeFiles/_lib.dir/Gladiators/Archer.cpp.o src/CMakeFiles/_lib.dir/Gladiators/Assassin.cpp.o src/CMakeFiles/_lib.dir/Gladiators/BaseGladiator.cpp.o src/CMakeFiles/_lib.dir/Gladiators/Brutal.cpp.o src/CMakeFiles/_lib.dir/Gladiators/Swordsman.cpp.o src/CMakeFiles/_lib.dir/Utils.cpp.o src/CMakeFiles/_lib.dir/main.cpp.o
-  ARCH_FLAGS = -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -mmacosx-version-min=10.15
-  LANGUAGE_COMPILE_FLAGS = -g
-  OBJECT_DIR = src/CMakeFiles/_lib.dir
-  POST_BUILD = :
-  PRE_LINK = :
-  TARGET_FILE = src/lib_lib.a
-  TARGET_PDB = _lib.a.dbg
-
-
-#############################################
-# Utility command for install/local
-
-build src/CMakeFiles/install/local.util: CUSTOM_COMMAND src/all
-  COMMAND = cd /Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/cmake-build-debug/src && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-  DESC = Installing only the local directory...
-  pool = console
-  restat = 1
-
-build src/install/local: phony src/CMakeFiles/install/local.util
-
-# =============================================================================
-# Object build statements for EXECUTABLE target _run
-
-
-#############################################
-# Order-only phony target for _run
-
-build cmake_object_order_depends_target__run: phony || src/CMakeFiles/_run.dir
-
-build src/CMakeFiles/_run.dir/GladiatorFactory.cpp.o: CXX_COMPILER___run_Debug /Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/src/GladiatorFactory.cpp || cmake_object_order_depends_target__run
-  DEP_FILE = src/CMakeFiles/_run.dir/GladiatorFactory.cpp.o.d
-  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -mmacosx-version-min=10.15 -std=gnu++14
-  INCLUDES = -I/Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/src
-  OBJECT_DIR = src/CMakeFiles/_run.dir
-  OBJECT_FILE_DIR = src/CMakeFiles/_run.dir
-
-build src/CMakeFiles/_run.dir/Gladiators/Archer.cpp.o: CXX_COMPILER___run_Debug /Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/src/Gladiators/Archer.cpp || cmake_object_order_depends_target__run
-  DEP_FILE = src/CMakeFiles/_run.dir/Gladiators/Archer.cpp.o.d
-  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -mmacosx-version-min=10.15 -std=gnu++14
-  INCLUDES = -I/Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/src
-  OBJECT_DIR = src/CMakeFiles/_run.dir
-  OBJECT_FILE_DIR = src/CMakeFiles/_run.dir/Gladiators
-
-build src/CMakeFiles/_run.dir/Gladiators/Assassin.cpp.o: CXX_COMPILER___run_Debug /Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/src/Gladiators/Assassin.cpp || cmake_object_order_depends_target__run
-  DEP_FILE = src/CMakeFiles/_run.dir/Gladiators/Assassin.cpp.o.d
-  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -mmacosx-version-min=10.15 -std=gnu++14
-  INCLUDES = -I/Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/src
-  OBJECT_DIR = src/CMakeFiles/_run.dir
-  OBJECT_FILE_DIR = src/CMakeFiles/_run.dir/Gladiators
-
-build src/CMakeFiles/_run.dir/Gladiators/BaseGladiator.cpp.o: CXX_COMPILER___run_Debug /Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/src/Gladiators/BaseGladiator.cpp || cmake_object_order_depends_target__run
-  DEP_FILE = src/CMakeFiles/_run.dir/Gladiators/BaseGladiator.cpp.o.d
-  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -mmacosx-version-min=10.15 -std=gnu++14
-  INCLUDES = -I/Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/src
-  OBJECT_DIR = src/CMakeFiles/_run.dir
-  OBJECT_FILE_DIR = src/CMakeFiles/_run.dir/Gladiators
-
-build src/CMakeFiles/_run.dir/Gladiators/Brutal.cpp.o: CXX_COMPILER___run_Debug /Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/src/Gladiators/Brutal.cpp || cmake_object_order_depends_target__run
-  DEP_FILE = src/CMakeFiles/_run.dir/Gladiators/Brutal.cpp.o.d
-  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -mmacosx-version-min=10.15 -std=gnu++14
-  INCLUDES = -I/Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/src
-  OBJECT_DIR = src/CMakeFiles/_run.dir
-  OBJECT_FILE_DIR = src/CMakeFiles/_run.dir/Gladiators
-
-build src/CMakeFiles/_run.dir/Gladiators/Swordsman.cpp.o: CXX_COMPILER___run_Debug /Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/src/Gladiators/Swordsman.cpp || cmake_object_order_depends_target__run
-  DEP_FILE = src/CMakeFiles/_run.dir/Gladiators/Swordsman.cpp.o.d
-  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -mmacosx-version-min=10.15 -std=gnu++14
-  INCLUDES = -I/Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/src
-  OBJECT_DIR = src/CMakeFiles/_run.dir
-  OBJECT_FILE_DIR = src/CMakeFiles/_run.dir/Gladiators
-
-build src/CMakeFiles/_run.dir/Utils.cpp.o: CXX_COMPILER___run_Debug /Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/src/Utils.cpp || cmake_object_order_depends_target__run
-  DEP_FILE = src/CMakeFiles/_run.dir/Utils.cpp.o.d
-  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -mmacosx-version-min=10.15 -std=gnu++14
-  INCLUDES = -I/Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/src
-  OBJECT_DIR = src/CMakeFiles/_run.dir
-  OBJECT_FILE_DIR = src/CMakeFiles/_run.dir
-
-build src/CMakeFiles/_run.dir/main.cpp.o: CXX_COMPILER___run_Debug /Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/src/main.cpp || cmake_object_order_depends_target__run
-  DEP_FILE = src/CMakeFiles/_run.dir/main.cpp.o.d
-  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -mmacosx-version-min=10.15 -std=gnu++14
-  INCLUDES = -I/Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/src
-  OBJECT_DIR = src/CMakeFiles/_run.dir
-  OBJECT_FILE_DIR = src/CMakeFiles/_run.dir
-
-
-# =============================================================================
-# Link build statements for EXECUTABLE target _run
-
-
-#############################################
-# Link the executable src/_run
-
-build src/_run: CXX_EXECUTABLE_LINKER___run_Debug src/CMakeFiles/_run.dir/GladiatorFactory.cpp.o src/CMakeFiles/_run.dir/Gladiators/Archer.cpp.o src/CMakeFiles/_run.dir/Gladiators/Assassin.cpp.o src/CMakeFiles/_run.dir/Gladiators/BaseGladiator.cpp.o src/CMakeFiles/_run.dir/Gladiators/Brutal.cpp.o src/CMakeFiles/_run.dir/Gladiators/Swordsman.cpp.o src/CMakeFiles/_run.dir/Utils.cpp.o src/CMakeFiles/_run.dir/main.cpp.o
-  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -mmacosx-version-min=10.15
-  OBJECT_DIR = src/CMakeFiles/_run.dir
-  POST_BUILD = :
-  PRE_LINK = :
-  TARGET_FILE = src/_run
-  TARGET_PDB = _run.dbg
 
 # =============================================================================
 # Write statements declared in CMakeLists.txt:
@@ -397,9 +234,16 @@ build cmake_object_order_depends_target_BaseGladiatorTest: phony || cmake_object
 build test/CMakeFiles/BaseGladiatorTest.dir/BaseGladiatorTest.cpp.o: CXX_COMPILER__BaseGladiatorTest_Debug /Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/test/BaseGladiatorTest.cpp || cmake_object_order_depends_target_BaseGladiatorTest
   DEP_FILE = test/CMakeFiles/BaseGladiatorTest.dir/BaseGladiatorTest.cpp.o.d
   FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -mmacosx-version-min=10.15 -std=gnu++14
-  INCLUDES = -I/Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/src -I/Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/test/test -isystem /Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/cmake-build-debug/_deps/googletest-src/googletest/include -isystem /Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/cmake-build-debug/_deps/googletest-src/googletest
+  INCLUDES = -I/Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/src -isystem /Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/cmake-build-debug/_deps/googletest-src/googletest/include -isystem /Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/cmake-build-debug/_deps/googletest-src/googletest
   OBJECT_DIR = test/CMakeFiles/BaseGladiatorTest.dir
   OBJECT_FILE_DIR = test/CMakeFiles/BaseGladiatorTest.dir
+
+build test/CMakeFiles/BaseGladiatorTest.dir/__/src/Gladiators/BaseGladiator.cpp.o: CXX_COMPILER__BaseGladiatorTest_Debug /Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/src/Gladiators/BaseGladiator.cpp || cmake_object_order_depends_target_BaseGladiatorTest
+  DEP_FILE = test/CMakeFiles/BaseGladiatorTest.dir/__/src/Gladiators/BaseGladiator.cpp.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -mmacosx-version-min=10.15 -std=gnu++14
+  INCLUDES = -I/Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/src -isystem /Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/cmake-build-debug/_deps/googletest-src/googletest/include -isystem /Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/cmake-build-debug/_deps/googletest-src/googletest
+  OBJECT_DIR = test/CMakeFiles/BaseGladiatorTest.dir
+  OBJECT_FILE_DIR = test/CMakeFiles/BaseGladiatorTest.dir/__/src/Gladiators
 
 
 # =============================================================================
@@ -409,13 +253,12 @@ build test/CMakeFiles/BaseGladiatorTest.dir/BaseGladiatorTest.cpp.o: CXX_COMPILE
 #############################################
 # Link the executable test/BaseGladiatorTest
 
-build test/BaseGladiatorTest test/BaseGladiatorTest[1]_tests.cmake | ${cmake_ninja_workdir}test/BaseGladiatorTest[1]_tests.cmake: CXX_EXECUTABLE_LINKER__BaseGladiatorTest_Debug test/CMakeFiles/BaseGladiatorTest.dir/BaseGladiatorTest.cpp.o | lib/libgtest_maind.a lib/libgtestd.a || lib/libgtest_maind.a lib/libgtestd.a
+build test/BaseGladiatorTest: CXX_EXECUTABLE_LINKER__BaseGladiatorTest_Debug test/CMakeFiles/BaseGladiatorTest.dir/BaseGladiatorTest.cpp.o test/CMakeFiles/BaseGladiatorTest.dir/__/src/Gladiators/BaseGladiator.cpp.o | lib/libgtest_maind.a lib/libgtestd.a || lib/libgtest_maind.a lib/libgtestd.a
   FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -mmacosx-version-min=10.15
   LINK_LIBRARIES = lib/libgtest_maind.a  lib/libgtestd.a
   OBJECT_DIR = test/CMakeFiles/BaseGladiatorTest.dir
-  POST_BUILD = cd /Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/cmake-build-debug/test && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -D TEST_TARGET=BaseGladiatorTest -D TEST_EXECUTABLE=/Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/cmake-build-debug/test/BaseGladiatorTest -D TEST_EXECUTOR= -D TEST_WORKING_DIR=/Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/cmake-build-debug/test -D TEST_EXTRA_ARGS= -D TEST_PROPERTIES= -D TEST_PREFIX= -D TEST_SUFFIX= -D NO_PRETTY_TYPES=FALSE -D NO_PRETTY_VALUES=FALSE -D TEST_LIST=BaseGladiatorTest_TESTS -D CTEST_FILE=/Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/cmake-build-debug/test/BaseGladiatorTest[1]_tests.cmake -D TEST_DISCOVERY_TIMEOUT=5 -D TEST_XML_OUTPUT_DIR= -P /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/GoogleTestAddTests.cmake
+  POST_BUILD = :
   PRE_LINK = :
-  RESTAT = 1
   TARGET_FILE = test/BaseGladiatorTest
   TARGET_PDB = BaseGladiatorTest.dbg
 
@@ -441,6 +284,46 @@ build test/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
   restat = 1
 
 build test/edit_cache: phony test/CMakeFiles/edit_cache.util
+
+# =============================================================================
+# Object build statements for EXECUTABLE target UtilsTest
+
+
+#############################################
+# Order-only phony target for UtilsTest
+
+build cmake_object_order_depends_target_UtilsTest: phony || cmake_object_order_depends_target_gtest cmake_object_order_depends_target_gtest_main
+
+build test/CMakeFiles/UtilsTest.dir/UtilsTest.cpp.o: CXX_COMPILER__UtilsTest_Debug /Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/test/UtilsTest.cpp || cmake_object_order_depends_target_UtilsTest
+  DEP_FILE = test/CMakeFiles/UtilsTest.dir/UtilsTest.cpp.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -mmacosx-version-min=10.15 -std=gnu++14
+  INCLUDES = -I/Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/src -isystem /Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/cmake-build-debug/_deps/googletest-src/googletest/include -isystem /Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/cmake-build-debug/_deps/googletest-src/googletest
+  OBJECT_DIR = test/CMakeFiles/UtilsTest.dir
+  OBJECT_FILE_DIR = test/CMakeFiles/UtilsTest.dir
+
+build test/CMakeFiles/UtilsTest.dir/__/src/Utils.cpp.o: CXX_COMPILER__UtilsTest_Debug /Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/src/Utils.cpp || cmake_object_order_depends_target_UtilsTest
+  DEP_FILE = test/CMakeFiles/UtilsTest.dir/__/src/Utils.cpp.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -mmacosx-version-min=10.15 -std=gnu++14
+  INCLUDES = -I/Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/src -isystem /Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/cmake-build-debug/_deps/googletest-src/googletest/include -isystem /Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/cmake-build-debug/_deps/googletest-src/googletest
+  OBJECT_DIR = test/CMakeFiles/UtilsTest.dir
+  OBJECT_FILE_DIR = test/CMakeFiles/UtilsTest.dir/__/src
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target UtilsTest
+
+
+#############################################
+# Link the executable test/UtilsTest
+
+build test/UtilsTest: CXX_EXECUTABLE_LINKER__UtilsTest_Debug test/CMakeFiles/UtilsTest.dir/UtilsTest.cpp.o test/CMakeFiles/UtilsTest.dir/__/src/Utils.cpp.o | lib/libgtest_maind.a lib/libgtestd.a || lib/libgtest_maind.a lib/libgtestd.a
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -mmacosx-version-min=10.15
+  LINK_LIBRARIES = lib/libgtest_maind.a  lib/libgtestd.a
+  OBJECT_DIR = test/CMakeFiles/UtilsTest.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = test/UtilsTest
+  TARGET_PDB = UtilsTest.dbg
 
 # =============================================================================
 # Write statements declared in CMakeLists.txt:
@@ -565,7 +448,7 @@ build cmake_object_order_depends_target_gmock: phony || cmake_object_order_depen
 build _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.o: CXX_COMPILER__gmock_Debug /Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/cmake-build-debug/_deps/googletest-src/googlemock/src/gmock-all.cc || cmake_object_order_depends_target_gmock
   DEP_FILE = _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.o.d
   FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -mmacosx-version-min=10.15 -Wall -Wshadow -Werror -Wconversion -DGTEST_HAS_PTHREAD=1 -fexceptions -W -Wpointer-arith -Wreturn-type -Wcast-qual -Wwrite-strings -Wswitch -Wunused-parameter -Wcast-align -Wchar-subscripts -Winline -Wredundant-decls -std=c++14
-  INCLUDES = -I/Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/src -I/Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/test/test -I/Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/cmake-build-debug/_deps/googletest-src/googlemock/include -I/Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/cmake-build-debug/_deps/googletest-src/googlemock -isystem /Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/cmake-build-debug/_deps/googletest-src/googletest/include -isystem /Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/cmake-build-debug/_deps/googletest-src/googletest
+  INCLUDES = -I/Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/src -I/Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/cmake-build-debug/_deps/googletest-src/googlemock/include -I/Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/cmake-build-debug/_deps/googletest-src/googlemock -isystem /Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/cmake-build-debug/_deps/googletest-src/googletest/include -isystem /Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/cmake-build-debug/_deps/googletest-src/googletest
   OBJECT_DIR = _deps/googletest-build/googlemock/CMakeFiles/gmock.dir
   OBJECT_FILE_DIR = _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/src
 
@@ -621,7 +504,7 @@ build cmake_object_order_depends_target_gmock_main: phony || cmake_object_order_
 build _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.o: CXX_COMPILER__gmock_main_Debug /Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/cmake-build-debug/_deps/googletest-src/googlemock/src/gmock_main.cc || cmake_object_order_depends_target_gmock_main
   DEP_FILE = _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.o.d
   FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -mmacosx-version-min=10.15 -Wall -Wshadow -Werror -Wconversion -DGTEST_HAS_PTHREAD=1 -fexceptions -W -Wpointer-arith -Wreturn-type -Wcast-qual -Wwrite-strings -Wswitch -Wunused-parameter -Wcast-align -Wchar-subscripts -Winline -Wredundant-decls -std=c++14
-  INCLUDES = -I/Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/src -I/Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/test/test -isystem /Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/cmake-build-debug/_deps/googletest-src/googlemock/include -isystem /Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/cmake-build-debug/_deps/googletest-src/googlemock -isystem /Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/cmake-build-debug/_deps/googletest-src/googletest/include -isystem /Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/cmake-build-debug/_deps/googletest-src/googletest
+  INCLUDES = -I/Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/src -isystem /Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/cmake-build-debug/_deps/googletest-src/googlemock/include -isystem /Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/cmake-build-debug/_deps/googletest-src/googlemock -isystem /Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/cmake-build-debug/_deps/googletest-src/googletest/include -isystem /Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/cmake-build-debug/_deps/googletest-src/googletest
   OBJECT_DIR = _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir
   OBJECT_FILE_DIR = _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/src
 
@@ -730,7 +613,7 @@ build cmake_object_order_depends_target_gtest_main: phony || cmake_object_order_
 build _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o: CXX_COMPILER__gtest_main_Debug /Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/cmake-build-debug/_deps/googletest-src/googletest/src/gtest_main.cc || cmake_object_order_depends_target_gtest_main
   DEP_FILE = _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o.d
   FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -mmacosx-version-min=10.15 -Wall -Wshadow -Werror -Wconversion -DGTEST_HAS_PTHREAD=1 -fexceptions -W -Wpointer-arith -Wreturn-type -Wcast-qual -Wwrite-strings -Wswitch -Wunused-parameter -Wcast-align -Wchar-subscripts -Winline -Wredundant-decls -std=c++14
-  INCLUDES = -I/Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/src -I/Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/test/test -isystem /Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/cmake-build-debug/_deps/googletest-src/googletest/include -isystem /Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/cmake-build-debug/_deps/googletest-src/googletest
+  INCLUDES = -I/Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/src -isystem /Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/cmake-build-debug/_deps/googletest-src/googletest/include -isystem /Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/cmake-build-debug/_deps/googletest-src/googletest
   OBJECT_DIR = _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir
   OBJECT_FILE_DIR = _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/src
 
@@ -763,7 +646,7 @@ build cmake_object_order_depends_target_gtest: phony || _deps/googletest-build/g
 build _deps/googletest-build/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o: CXX_COMPILER__gtest_Debug /Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/cmake-build-debug/_deps/googletest-src/googletest/src/gtest-all.cc || cmake_object_order_depends_target_gtest
   DEP_FILE = _deps/googletest-build/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o.d
   FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -mmacosx-version-min=10.15 -Wall -Wshadow -Werror -Wconversion -DGTEST_HAS_PTHREAD=1 -fexceptions -W -Wpointer-arith -Wreturn-type -Wcast-qual -Wwrite-strings -Wswitch -Wunused-parameter -Wcast-align -Wchar-subscripts -Winline -Wredundant-decls -std=c++14
-  INCLUDES = -I/Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/src -I/Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/test/test -I/Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/cmake-build-debug/_deps/googletest-src/googletest/include -I/Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/cmake-build-debug/_deps/googletest-src/googletest
+  INCLUDES = -I/Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/src -I/Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/cmake-build-debug/_deps/googletest-src/googletest/include -I/Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/cmake-build-debug/_deps/googletest-src/googletest
   OBJECT_DIR = _deps/googletest-build/googletest/CMakeFiles/gtest.dir
   OBJECT_FILE_DIR = _deps/googletest-build/googletest/CMakeFiles/gtest.dir/src
 
@@ -789,9 +672,7 @@ build lib/libgtestd.a: CXX_STATIC_LIBRARY_LINKER__gtest_Debug _deps/googletest-b
 
 build BaseGladiatorTest: phony test/BaseGladiatorTest
 
-build _lib: phony src/lib_lib.a
-
-build _run: phony src/_run
+build UtilsTest: phony test/UtilsTest
 
 build gmock: phony lib/libgmockd.a
 
@@ -800,8 +681,6 @@ build gmock_main: phony lib/libgmock_maind.a
 build gtest: phony lib/libgtestd.a
 
 build gtest_main: phony lib/libgtest_maind.a
-
-build lib_lib.a: phony src/lib_lib.a
 
 build libgmock_maind.a: phony lib/libgmock_maind.a
 
@@ -847,14 +726,14 @@ build _deps/googletest-build/googletest/all: phony lib/libgtest_maind.a lib/libg
 #############################################
 # Folder: /Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/cmake-build-debug/src
 
-build src/all: phony src/lib_lib.a src/_run
+build src/all: phony
 
 # =============================================================================
 
 #############################################
 # Folder: /Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/cmake-build-debug/test
 
-build test/all: phony test/BaseGladiatorTest _deps/googletest-build/all
+build test/all: phony test/BaseGladiatorTest test/UtilsTest _deps/googletest-build/all
 
 # =============================================================================
 # Built-in targets
@@ -863,14 +742,14 @@ build test/all: phony test/BaseGladiatorTest _deps/googletest-build/all
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja: RERUN_CMAKE | ../CMakeLists.txt ../src/CMakeLists.txt ../test/CMakeLists.txt /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/BasicConfigVersion-AnyNewerVersion.cmake.in /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/CMakeCInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/CMakeCXXInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/CMakeCommonLanguageInclude.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/CMakeDependentOption.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/CMakeGenericSystem.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/CMakeInitializeConfigs.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/CMakeLanguageInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/CMakePackageConfigHelpers.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/CMakeSystemSpecificInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/CMakeSystemSpecificInitialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/CheckCSourceCompiles.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/CheckIncludeFile.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/CheckLibraryExists.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Compiler/AppleClang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Compiler/AppleClang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Compiler/CMakeCommonCompilerMacros.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Compiler/Clang.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Compiler/GNU.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/FetchContent.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/FetchContent/CMakeLists.cmake.in /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/FindPackageHandleStandardArgs.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/FindPackageMessage.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/FindPython.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/FindPython/Support.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/FindThreads.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/GNUInstallDirs.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/GoogleTest.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Internal/CheckSourceCompiles.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Platform/Apple-AppleClang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Platform/Apple-AppleClang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Platform/Apple-Clang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Platform/Apple-Clang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Platform/Apple-Clang.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Platform/Darwin-Initialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Platform/Darwin.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Platform/UnixPaths.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/WriteBasicConfigVersionFile.cmake CMakeCache.txt CMakeFiles/3.21.1/CMakeCCompiler.cmake CMakeFiles/3.21.1/CMakeCXXCompiler.cmake CMakeFiles/3.21.1/CMakeSystem.cmake _deps/googletest-src/CMakeLists.txt _deps/googletest-src/googlemock/CMakeLists.txt _deps/googletest-src/googlemock/cmake/gmock.pc.in _deps/googletest-src/googlemock/cmake/gmock_main.pc.in _deps/googletest-src/googletest/CMakeLists.txt _deps/googletest-src/googletest/cmake/Config.cmake.in _deps/googletest-src/googletest/cmake/gtest.pc.in _deps/googletest-src/googletest/cmake/gtest_main.pc.in _deps/googletest-src/googletest/cmake/internal_utils.cmake
+build build.ninja: RERUN_CMAKE | ../CMakeLists.txt ../src/CMakeLists.txt ../test/CMakeLists.txt /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/BasicConfigVersion-AnyNewerVersion.cmake.in /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/CMakeCInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/CMakeCXXInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/CMakeCommonLanguageInclude.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/CMakeDependentOption.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/CMakeGenericSystem.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/CMakeInitializeConfigs.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/CMakeLanguageInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/CMakePackageConfigHelpers.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/CMakeSystemSpecificInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/CMakeSystemSpecificInitialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/CheckCSourceCompiles.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/CheckIncludeFile.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/CheckLibraryExists.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Compiler/AppleClang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Compiler/AppleClang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Compiler/CMakeCommonCompilerMacros.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Compiler/Clang.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Compiler/GNU.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/FetchContent.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/FetchContent/CMakeLists.cmake.in /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/FindPackageHandleStandardArgs.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/FindPackageMessage.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/FindPython.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/FindPython/Support.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/FindThreads.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/GNUInstallDirs.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Internal/CheckSourceCompiles.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Platform/Apple-AppleClang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Platform/Apple-AppleClang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Platform/Apple-Clang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Platform/Apple-Clang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Platform/Apple-Clang.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Platform/Darwin-Initialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Platform/Darwin.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Platform/UnixPaths.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/WriteBasicConfigVersionFile.cmake CMakeCache.txt CMakeFiles/3.21.1/CMakeCCompiler.cmake CMakeFiles/3.21.1/CMakeCXXCompiler.cmake CMakeFiles/3.21.1/CMakeSystem.cmake _deps/googletest-src/CMakeLists.txt _deps/googletest-src/googlemock/CMakeLists.txt _deps/googletest-src/googlemock/cmake/gmock.pc.in _deps/googletest-src/googlemock/cmake/gmock_main.pc.in _deps/googletest-src/googletest/CMakeLists.txt _deps/googletest-src/googletest/cmake/Config.cmake.in _deps/googletest-src/googletest/cmake/gtest.pc.in _deps/googletest-src/googletest/cmake/gtest_main.pc.in _deps/googletest-src/googletest/cmake/internal_utils.cmake
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build ../CMakeLists.txt ../src/CMakeLists.txt ../test/CMakeLists.txt /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/BasicConfigVersion-AnyNewerVersion.cmake.in /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/CMakeCInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/CMakeCXXInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/CMakeCommonLanguageInclude.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/CMakeDependentOption.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/CMakeGenericSystem.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/CMakeInitializeConfigs.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/CMakeLanguageInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/CMakePackageConfigHelpers.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/CMakeSystemSpecificInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/CMakeSystemSpecificInitialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/CheckCSourceCompiles.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/CheckIncludeFile.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/CheckLibraryExists.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Compiler/AppleClang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Compiler/AppleClang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Compiler/CMakeCommonCompilerMacros.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Compiler/Clang.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Compiler/GNU.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/FetchContent.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/FetchContent/CMakeLists.cmake.in /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/FindPackageHandleStandardArgs.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/FindPackageMessage.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/FindPython.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/FindPython/Support.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/FindThreads.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/GNUInstallDirs.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/GoogleTest.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Internal/CheckSourceCompiles.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Platform/Apple-AppleClang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Platform/Apple-AppleClang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Platform/Apple-Clang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Platform/Apple-Clang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Platform/Apple-Clang.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Platform/Darwin-Initialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Platform/Darwin.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Platform/UnixPaths.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/WriteBasicConfigVersionFile.cmake CMakeCache.txt CMakeFiles/3.21.1/CMakeCCompiler.cmake CMakeFiles/3.21.1/CMakeCXXCompiler.cmake CMakeFiles/3.21.1/CMakeSystem.cmake _deps/googletest-src/CMakeLists.txt _deps/googletest-src/googlemock/CMakeLists.txt _deps/googletest-src/googlemock/cmake/gmock.pc.in _deps/googletest-src/googlemock/cmake/gmock_main.pc.in _deps/googletest-src/googletest/CMakeLists.txt _deps/googletest-src/googletest/cmake/Config.cmake.in _deps/googletest-src/googletest/cmake/gtest.pc.in _deps/googletest-src/googletest/cmake/gtest_main.pc.in _deps/googletest-src/googletest/cmake/internal_utils.cmake: phony
+build ../CMakeLists.txt ../src/CMakeLists.txt ../test/CMakeLists.txt /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/BasicConfigVersion-AnyNewerVersion.cmake.in /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/CMakeCInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/CMakeCXXInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/CMakeCommonLanguageInclude.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/CMakeDependentOption.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/CMakeGenericSystem.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/CMakeInitializeConfigs.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/CMakeLanguageInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/CMakePackageConfigHelpers.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/CMakeSystemSpecificInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/CMakeSystemSpecificInitialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/CheckCSourceCompiles.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/CheckIncludeFile.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/CheckLibraryExists.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Compiler/AppleClang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Compiler/AppleClang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Compiler/CMakeCommonCompilerMacros.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Compiler/Clang.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Compiler/GNU.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/FetchContent.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/FetchContent/CMakeLists.cmake.in /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/FindPackageHandleStandardArgs.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/FindPackageMessage.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/FindPython.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/FindPython/Support.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/FindThreads.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/GNUInstallDirs.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Internal/CheckSourceCompiles.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Platform/Apple-AppleClang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Platform/Apple-AppleClang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Platform/Apple-Clang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Platform/Apple-Clang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Platform/Apple-Clang.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Platform/Darwin-Initialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Platform/Darwin.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Platform/UnixPaths.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/WriteBasicConfigVersionFile.cmake CMakeCache.txt CMakeFiles/3.21.1/CMakeCCompiler.cmake CMakeFiles/3.21.1/CMakeCXXCompiler.cmake CMakeFiles/3.21.1/CMakeSystem.cmake _deps/googletest-src/CMakeLists.txt _deps/googletest-src/googlemock/CMakeLists.txt _deps/googletest-src/googlemock/cmake/gmock.pc.in _deps/googletest-src/googlemock/cmake/gmock_main.pc.in _deps/googletest-src/googletest/CMakeLists.txt _deps/googletest-src/googletest/cmake/Config.cmake.in _deps/googletest-src/googletest/cmake/gtest.pc.in _deps/googletest-src/googletest/cmake/gtest_main.pc.in _deps/googletest-src/googletest/cmake/internal_utils.cmake: phony
 
 
 #############################################

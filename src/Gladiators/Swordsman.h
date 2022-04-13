@@ -9,8 +9,15 @@
 #include "BaseGladiator.h"
 
 class Swordsman : public BaseGladiator{
-
+    Swordsman(string name): BaseGladiator(name){
+        Type = "Swordsman";
+        FullName = Type + " " + Name;
+        hp_multiplier = High;
+        sp_multiplier = Medium;
+        dex_multiplier = Low;
+    }
 };
+
 
 
 #endif //THEGLADIATORPROJECT_SWORDSMAN_H

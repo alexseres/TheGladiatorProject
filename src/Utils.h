@@ -4,10 +4,16 @@
 
 #ifndef THEGLADIATORPROJECT_UTILS_H
 #define THEGLADIATORPROJECT_UTILS_H
+#include <iostream>
 using namespace std;
 
 class Utils {
-    int getRandomNumber(int min, int max);
+private:
+    const string fileName = "/GladiatorPossibleNames";
+public:
+    string getFileName(){return fileName;}
+    int getRandomNumber(int max);
+    string getLineByRandomNumber(int randNum);
 };
 
 

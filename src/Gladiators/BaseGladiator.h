@@ -5,20 +5,27 @@
 #ifndef THEGLADIATORPROJECT_BASEGLADIATOR_H
 #define THEGLADIATORPROJECT_BASEGLADIATOR_H
 #include <iostream>
-using namespace std;
+#include "StatisticMultiplier.cpp"
 
+using namespace std;
 
 class BaseGladiator {
 protected:
     const string Name;
     string FullName;
     string Type;
+    int Level;
+    int HP;
+    int SP;
+    int DEX;
+    StaticticMultiplier hp_multiplier;
+    StaticticMultiplier sp_multiplier;
+    StaticticMultiplier dex_multiplier;
+    int StarterHealth;
+    int CurrentHealth;
 public:
-
-    BaseGladiator(string name): Name(name){}
-
-
-
+    BaseGladiator(string name): Name(name){};
+    virtual void overrideMultipliers();
 };
 
 

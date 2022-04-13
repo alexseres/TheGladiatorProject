@@ -5,7 +5,3 @@
 #include "GladiatorFactory.h"
 #include <fstream>
 
-
-string GladiatorFactory::selectNameFromFile() {
-
-}
