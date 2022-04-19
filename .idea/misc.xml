@@ -5,6 +5,7 @@
     <sourceRoots>
       <file path="$PROJECT_DIR$/src" />
       <file path="$PROJECT_DIR$/src/Gladiators" />
+      <file path="$PROJECT_DIR$/test" />
     </sourceRoots>
   </component>
 </project>

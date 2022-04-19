@@ -194,30 +194,6 @@ build test/install/local: phony test/CMakeFiles/install/local.util
 
 
 #############################################
-# Utility command for install/strip
-
-build test/CMakeFiles/install/strip.util: CUSTOM_COMMAND test/all
-  COMMAND = cd /Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/cmake-build-debug/test && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-  DESC = Installing the project stripped...
-  pool = console
-  restat = 1
-
-build test/install/strip: phony test/CMakeFiles/install/strip.util
-
-
-#############################################
-# Utility command for install
-
-build test/CMakeFiles/install.util: CUSTOM_COMMAND test/all
-  COMMAND = cd /Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/cmake-build-debug/test && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -P cmake_install.cmake
-  DESC = Install the project...
-  pool = console
-  restat = 1
-
-build test/install: phony test/CMakeFiles/install.util
-
-
-#############################################
 # Utility command for list_install_components
 
 build test/list_install_components: phony
@@ -284,6 +260,84 @@ build test/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
   restat = 1
 
 build test/edit_cache: phony test/CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for install/strip
+
+build test/CMakeFiles/install/strip.util: CUSTOM_COMMAND test/all
+  COMMAND = cd /Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/cmake-build-debug/test && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+  DESC = Installing the project stripped...
+  pool = console
+  restat = 1
+
+build test/install/strip: phony test/CMakeFiles/install/strip.util
+
+
+#############################################
+# Utility command for install
+
+build test/CMakeFiles/install.util: CUSTOM_COMMAND test/all
+  COMMAND = cd /Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/cmake-build-debug/test && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -P cmake_install.cmake
+  DESC = Install the project...
+  pool = console
+  restat = 1
+
+build test/install: phony test/CMakeFiles/install.util
+
+# =============================================================================
+# Object build statements for EXECUTABLE target GladiatorFactoryTest
+
+
+#############################################
+# Order-only phony target for GladiatorFactoryTest
+
+build cmake_object_order_depends_target_GladiatorFactoryTest: phony || cmake_object_order_depends_target_gtest cmake_object_order_depends_target_gtest_main
+
+build test/CMakeFiles/GladiatorFactoryTest.dir/GladiatorFactoryTest.cpp.o: CXX_COMPILER__GladiatorFactoryTest_Debug /Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/test/GladiatorFactoryTest.cpp || cmake_object_order_depends_target_GladiatorFactoryTest
+  DEP_FILE = test/CMakeFiles/GladiatorFactoryTest.dir/GladiatorFactoryTest.cpp.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -mmacosx-version-min=10.15 -std=gnu++14
+  INCLUDES = -I/Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/src -isystem /Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/cmake-build-debug/_deps/googletest-src/googletest/include -isystem /Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/cmake-build-debug/_deps/googletest-src/googletest
+  OBJECT_DIR = test/CMakeFiles/GladiatorFactoryTest.dir
+  OBJECT_FILE_DIR = test/CMakeFiles/GladiatorFactoryTest.dir
+
+build test/CMakeFiles/GladiatorFactoryTest.dir/__/src/GladiatorFactory.cpp.o: CXX_COMPILER__GladiatorFactoryTest_Debug /Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/src/GladiatorFactory.cpp || cmake_object_order_depends_target_GladiatorFactoryTest
+  DEP_FILE = test/CMakeFiles/GladiatorFactoryTest.dir/__/src/GladiatorFactory.cpp.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -mmacosx-version-min=10.15 -std=gnu++14
+  INCLUDES = -I/Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/src -isystem /Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/cmake-build-debug/_deps/googletest-src/googletest/include -isystem /Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/cmake-build-debug/_deps/googletest-src/googletest
+  OBJECT_DIR = test/CMakeFiles/GladiatorFactoryTest.dir
+  OBJECT_FILE_DIR = test/CMakeFiles/GladiatorFactoryTest.dir/__/src
+
+build test/CMakeFiles/GladiatorFactoryTest.dir/__/src/Utils.cpp.o: CXX_COMPILER__GladiatorFactoryTest_Debug /Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/src/Utils.cpp || cmake_object_order_depends_target_GladiatorFactoryTest
+  DEP_FILE = test/CMakeFiles/GladiatorFactoryTest.dir/__/src/Utils.cpp.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -mmacosx-version-min=10.15 -std=gnu++14
+  INCLUDES = -I/Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/src -isystem /Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/cmake-build-debug/_deps/googletest-src/googletest/include -isystem /Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/cmake-build-debug/_deps/googletest-src/googletest
+  OBJECT_DIR = test/CMakeFiles/GladiatorFactoryTest.dir
+  OBJECT_FILE_DIR = test/CMakeFiles/GladiatorFactoryTest.dir/__/src
+
+build test/CMakeFiles/GladiatorFactoryTest.dir/__/src/Gladiators/BaseGladiator.cpp.o: CXX_COMPILER__GladiatorFactoryTest_Debug /Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/src/Gladiators/BaseGladiator.cpp || cmake_object_order_depends_target_GladiatorFactoryTest
+  DEP_FILE = test/CMakeFiles/GladiatorFactoryTest.dir/__/src/Gladiators/BaseGladiator.cpp.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -mmacosx-version-min=10.15 -std=gnu++14
+  INCLUDES = -I/Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/src -isystem /Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/cmake-build-debug/_deps/googletest-src/googletest/include -isystem /Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/cmake-build-debug/_deps/googletest-src/googletest
+  OBJECT_DIR = test/CMakeFiles/GladiatorFactoryTest.dir
+  OBJECT_FILE_DIR = test/CMakeFiles/GladiatorFactoryTest.dir/__/src/Gladiators
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target GladiatorFactoryTest
+
+
+#############################################
+# Link the executable test/GladiatorFactoryTest
+
+build test/GladiatorFactoryTest: CXX_EXECUTABLE_LINKER__GladiatorFactoryTest_Debug test/CMakeFiles/GladiatorFactoryTest.dir/GladiatorFactoryTest.cpp.o test/CMakeFiles/GladiatorFactoryTest.dir/__/src/GladiatorFactory.cpp.o test/CMakeFiles/GladiatorFactoryTest.dir/__/src/Utils.cpp.o test/CMakeFiles/GladiatorFactoryTest.dir/__/src/Gladiators/BaseGladiator.cpp.o | lib/libgtest_maind.a lib/libgtestd.a || lib/libgtest_maind.a lib/libgtestd.a
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -mmacosx-version-min=10.15
+  LINK_LIBRARIES = lib/libgtest_maind.a  lib/libgtestd.a
+  OBJECT_DIR = test/CMakeFiles/GladiatorFactoryTest.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = test/GladiatorFactoryTest
+  TARGET_PDB = GladiatorFactoryTest.dbg
 
 # =============================================================================
 # Object build statements for EXECUTABLE target UtilsTest
@@ -672,6 +726,8 @@ build lib/libgtestd.a: CXX_STATIC_LIBRARY_LINKER__gtest_Debug _deps/googletest-b
 
 build BaseGladiatorTest: phony test/BaseGladiatorTest
 
+build GladiatorFactoryTest: phony test/GladiatorFactoryTest
+
 build UtilsTest: phony test/UtilsTest
 
 build gmock: phony lib/libgmockd.a
@@ -733,7 +789,7 @@ build src/all: phony
 #############################################
 # Folder: /Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/cmake-build-debug/test
 
-build test/all: phony test/BaseGladiatorTest test/UtilsTest _deps/googletest-build/all
+build test/all: phony test/BaseGladiatorTest test/GladiatorFactoryTest test/UtilsTest _deps/googletest-build/all
 
 # =============================================================================
 # Built-in targets

@@ -12,8 +12,7 @@ using namespace std;
 
 class BaseGladiator {
 protected:
-    const string Name;
-    string FullName;
+    string Name;
     GladiatorType Type;
     int Level;
     double HP;
@@ -25,7 +24,19 @@ protected:
     int StarterHealth;
     int CurrentHealth;
 public:
-    BaseGladiator(GladiatorType type, string name, double hp, double sp, double dex, int level):Type(type),Name(name), HP(hp), SP(sp), DEX(dex), Level(level){};
+//    BaseGladiator(GladiatorType type, string name, double hp, double sp, double dex, int level):Type(type),Name(name), HP(hp), SP(sp), DEX(dex), Level(level){
+    BaseGladiator(GladiatorType type, string name, double hp, double sp, double dex, int level){
+        this-> Type = type;
+        this-> Name = name;
+        this-> HP = hp;
+        this-> SP = sp;
+        this-> DEX = dex;
+        this-> Level = level;
+        StarterHealth = 100;
+        CurrentHealth = 100;
+    };
+    GladiatorType getGladiatorType(){return Type;}
+    int getGladiatorLevel(){return Level;}
     double getHP() const {return HP;}
     double getSP() const {return SP;}
     double getDEX() const {return DEX;}

@@ -20,12 +20,14 @@ private:
     GladiatorType GladiatorPossibilities[5] = {Archer, Assassin, Swordsman, Swordsman, Brutal};
 
 public:
-    int GladiatorsSize = 64;
-    string GladiatorFileName = "/GladiatorPossibleNames";
+    int GladiatorPossibilitiesSize = 5;
+    static const int GladiatorArraySize = 64;
+    BaseGladiator *Gladiators[GladiatorArraySize];
+    int GladiatorNameListSize = 46;
+    string GladiatorFileName = "/Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/src/GladiatorPossibleNames.txt";
     Utils OwnUtils;
     void generateGladiators();
-    BaseGladiator generateGladiator();
-
+    BaseGladiator *generateGladiator();
 };
 
 

@@ -7,17 +7,17 @@
 
 
 void GladiatorFactory::generateGladiators() {
-    BaseGladiator *gladiatorArr[GladiatorsSize];
-
-    for(int i = 0;i < GladiatorsSize;i++){
-
+    for(int i = 0;i < GladiatorArraySize;i++){
+        BaseGladiator *gladiator = generateGladiator();
+        Gladiators[i] = gladiator;
+        delete gladiator;
     }
-
 }
 
-BaseGladiator GladiatorFactory::generateGladiator() {
-    int randomGladiatorTypeIndex = rand() % sizeof(GladiatorPossibilities)/sizeof(GladiatorPossibilities[0]);
-    int randomGladiatorNum = OwnUtils.getRandomNumber(GladiatorsSize);
+BaseGladiator * GladiatorFactory::generateGladiator() {
+    srand(time(NULL));    // this is to be able to calculate new random num every time to give different result
+    int randomGladiatorTypeIndex = rand() % GladiatorPossibilitiesSize;
+    int randomGladiatorNum = OwnUtils.getRandomNumber(GladiatorNameListSize);
     int randomGladiatorLevel = OwnUtils.getRandomNumber(1, 5);
     int randomHP = OwnUtils.getRandomNumber(25,100);
     int randomSP = OwnUtils.getRandomNumber(25, 100);
@@ -26,22 +26,25 @@ BaseGladiator GladiatorFactory::generateGladiator() {
     switch (GladiatorPossibilities[randomGladiatorTypeIndex]) {
         case Archer: {
             string fullName = "Archer " + randomGladiatorName;
-            class Archer archer(Archer, fullName, randomHP, randomSP, randomDEX, randomGladiatorLevel);
+            //class Archer archer(Archer, fullName, randomHP, randomSP, randomDEX, randomGladiatorLevel);
+//            return archer;
+            //class Archer archer(Archer, fullName, randomHP, randomSP, randomDEX, randomGladiatorLevel);
+            class Archer *archer = new class Archer(Archer, fullName, randomHP, randomSP, randomDEX, randomGladiatorLevel);
             return archer;
         }
         case Assassin: {
             string fullName = "Assassin" + randomGladiatorName;
-            class Assassin assassin(Assassin, fullName, randomHP, randomSP, randomDEX, randomGladiatorLevel);
+            class Assassin *assassin = new class Assassin(Assassin, fullName, randomHP, randomSP, randomDEX, randomGladiatorLevel);
             return assassin;
         }
         case Brutal: {
             string fullName = "Brutal" + randomGladiatorName;
-            class Brutal brutal(Brutal, fullName, randomHP, randomSP, randomDEX, randomGladiatorLevel);
+            class Brutal *brutal = new class Brutal(Brutal, fullName, randomHP, randomSP, randomDEX, randomGladiatorLevel);
             return brutal;
         }
         case Swordsman: {
             string fullName = "Swordsman" + randomGladiatorName;
-            class Swordsman swordsman(Brutal, fullName, randomHP, randomSP, randomDEX, randomGladiatorLevel);
+            class Swordsman *swordsman = new class Swordsman(Brutal, fullName, randomHP, randomSP, randomDEX, randomGladiatorLevel);
             return swordsman;
         }
     }

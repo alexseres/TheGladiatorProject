@@ -6,7 +6,7 @@
 #include "../src/Gladiators/Archer.h"
 
 
-TEST(BaseGladiatorTests, check_IncreaseAbilities_Method){
+TEST(BaseGladiatorTest, check_IncreaseAbilities_Method){
     double hp = 27;
     double sp = 65;
     double dex = 32;

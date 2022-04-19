@@ -49,7 +49,8 @@
 					"targetIndexes" : 
 					[
 						0,
-						1
+						1,
+						2
 					]
 				},
 				{
@@ -75,7 +76,7 @@
 						5
 					],
 					"hasInstallRule" : true,
-					"jsonFile" : "directory-_deps.googletest-build.googlemock-Debug-03f95dbe350b0cdd9b41.json",
+					"jsonFile" : "directory-_deps.googletest-build.googlemock-Debug-5f623145eb35b7762ce2.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "2.8.12"
@@ -85,14 +86,14 @@
 					"source" : "cmake-build-debug/_deps/googletest-src/googlemock",
 					"targetIndexes" : 
 					[
-						2,
-						3
+						3,
+						4
 					]
 				},
 				{
 					"build" : "_deps/googletest-build/googletest",
 					"hasInstallRule" : true,
-					"jsonFile" : "directory-_deps.googletest-build.googletest-Debug-c28381d8d328c24ab59a.json",
+					"jsonFile" : "directory-_deps.googletest-build.googletest-Debug-50492f34d494e606a48f.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "2.8.12"
@@ -102,8 +103,8 @@
 					"source" : "cmake-build-debug/_deps/googletest-src/googletest",
 					"targetIndexes" : 
 					[
-						4,
-						5
+						5,
+						6
 					]
 				}
 			],
@@ -125,7 +126,8 @@
 					"targetIndexes" : 
 					[
 						0,
-						1
+						1,
+						2
 					]
 				},
 				{
@@ -153,8 +155,8 @@
 					"parentIndex" : 1,
 					"targetIndexes" : 
 					[
-						2,
-						3
+						3,
+						4
 					]
 				},
 				{
@@ -166,8 +168,8 @@
 					"parentIndex" : 2,
 					"targetIndexes" : 
 					[
-						4,
-						5
+						5,
+						6
 					]
 				}
 			],
@@ -176,14 +178,21 @@
 				{
 					"directoryIndex" : 2,
 					"id" : "BaseGladiatorTest::@36f028580bb02cc8272a",
-					"jsonFile" : "target-BaseGladiatorTest-Debug-ddfb63973ffc4f2da1e3.json",
+					"jsonFile" : "target-BaseGladiatorTest-Debug-1faf3296271b98bc9ea1.json",
 					"name" : "BaseGladiatorTest",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 2,
+					"id" : "GladiatorFactoryTest::@36f028580bb02cc8272a",
+					"jsonFile" : "target-GladiatorFactoryTest-Debug-f95c1a35d8cfc81e4a9a.json",
+					"name" : "GladiatorFactoryTest",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
 					"id" : "UtilsTest::@36f028580bb02cc8272a",
-					"jsonFile" : "target-UtilsTest-Debug-48be326e1490b2b9e288.json",
+					"jsonFile" : "target-UtilsTest-Debug-092c35d5fd62c53b04de.json",
 					"name" : "UtilsTest",
 					"projectIndex" : 0
 				},

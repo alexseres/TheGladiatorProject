@@ -10,7 +10,6 @@ private:
 public:
     Archer(GladiatorType type, string name, double hp, double sp, double dex, int level):
     BaseGladiator(type, name, hp, sp, dex, level){
-        Type = type;
         hp_multiplier = Medium;
         sp_multiplier = Medium;
         dex_multiplier = High;

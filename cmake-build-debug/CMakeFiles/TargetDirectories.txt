@@ -11,12 +11,13 @@
 /Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/cmake-build-debug/src/CMakeFiles/rebuild_cache.dir
 /Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/cmake-build-debug/src/CMakeFiles/edit_cache.dir
 /Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/cmake-build-debug/test/CMakeFiles/install/local.dir
-/Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/cmake-build-debug/test/CMakeFiles/install/strip.dir
-/Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/cmake-build-debug/test/CMakeFiles/install.dir
 /Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/cmake-build-debug/test/CMakeFiles/list_install_components.dir
 /Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/cmake-build-debug/test/CMakeFiles/BaseGladiatorTest.dir
 /Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/cmake-build-debug/test/CMakeFiles/rebuild_cache.dir
 /Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/cmake-build-debug/test/CMakeFiles/edit_cache.dir
+/Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/cmake-build-debug/test/CMakeFiles/install/strip.dir
+/Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/cmake-build-debug/test/CMakeFiles/install.dir
+/Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/cmake-build-debug/test/CMakeFiles/GladiatorFactoryTest.dir
 /Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/cmake-build-debug/test/CMakeFiles/UtilsTest.dir
 /Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/cmake-build-debug/_deps/googletest-build/CMakeFiles/install/local.dir
 /Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/cmake-build-debug/_deps/googletest-build/CMakeFiles/install/strip.dir
