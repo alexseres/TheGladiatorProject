@@ -11,10 +11,14 @@ int Utils::getRandomNumber(int max) {
     return rand() % max + 1;
 }
 
-string Utils::getLineByRandomNumber(int randNum) {
+int Utils::getRandomNumber(int min, int max) {
+    return rand() % (max - min + 1) + min;
+}
+
+string Utils::getLineByRandomNumber(int randNum, string fileName) {
     string neededLine;
     ifstream file;
-    file.open(getFileName(), ios::out);
+    file.open(fileName, ios::out);
     if(file.is_open()){
         int counter = 0;
         for(string line; (getline(file, line));){
@@ -32,3 +36,4 @@ string Utils::getLineByRandomNumber(int randNum) {
     }
     return neededLine;
 }
+

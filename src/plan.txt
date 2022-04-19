@@ -1,0 +1,6 @@
+Gladiator creation plan:
+    need to:
+        -choose the kind of gladiator type
+        -create a random name
+        -assign a level(1-5) randomly
+        -assign HP, SP, DEX from (25-100) randomly

@@ -9,11 +9,17 @@ using namespace std;
 
 class Utils {
 private:
-    const string fileName = "/GladiatorPossibleNames";
+    string FileName;
+    int GladiatorNamesSize;
+
 public:
-    string getFileName(){return fileName;}
+    string getFileName(){return FileName;}
+    void setFileName(string fileName){FileName = fileName; }
+    int getGladiatorNamesSize(){return GladiatorNamesSize;}
+    void setGladiatorNamesSize(int size){GladiatorNamesSize = size;}
     int getRandomNumber(int max);
-    string getLineByRandomNumber(int randNum);
+    int getRandomNumber(int min, int max);
+    string getLineByRandomNumber(int randNum, string fileName);
 };
 
 

@@ -35,3 +35,12 @@
 1767	1937	1649778391821319906	test/UtilsTest	a93e8df4c19cbc2b
 3	903	1649763953412192975	test/CMakeFiles/BaseGladiatorTest.dir/UtilsTest.cpp.o	82ed903a3720b2f7
 4170	4241	1649777809589288000	lib/libgtestd.a	49d0bf04b6f1a1e1
+29	4229	1649856087521353571	test/CMakeFiles/BaseGladiatorTest.dir/__/src/Gladiators/BaseGladiator.cpp.o	83331c3be18d5489
+8	1765	1649858159862219014	test/CMakeFiles/BaseGladiatorTest.dir/BaseGladiatorTest.cpp.o	e029b4509e8158c6
+1765	2087	1649858160179197072	test/BaseGladiatorTest	bbb052a6ba4b813b
+5	649	1649858386860331416	test/CMakeFiles/BaseGladiatorTest.dir/__/src/Gladiators/BaseGladiator.cpp.o	83331c3be18d5489
+3	1243	1649858449127003381	test/CMakeFiles/BaseGladiatorTest.dir/BaseGladiatorTest.cpp.o	e029b4509e8158c6
+1243	1386	1649858449274646885	test/BaseGladiatorTest	bbb052a6ba4b813b
+8	1632	1650359366358518080	test/CMakeFiles/BaseGladiatorTest.dir/__/src/Gladiators/BaseGladiator.cpp.o	83331c3be18d5489
+3	2036	1650359366762696910	test/CMakeFiles/BaseGladiatorTest.dir/BaseGladiatorTest.cpp.o	e029b4509e8158c6
+2036	2389	1650359367116269368	test/BaseGladiatorTest	bbb052a6ba4b813b
