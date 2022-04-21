@@ -8,11 +8,22 @@
 using namespace std;
 
 const int Utils::getRandomNumber(int max) {
-    return rand() % max + 1;
+    return rand() % max;
 }
-
 const int Utils::getRandomNumber(int min, int max) {
     return rand() % (max - min + 1) + min;
+}
+const int Utils::getClampValue(int number) {
+    int lower = 10;
+    int upper = 100;
+    return max(lower, min(number, upper));
+}
+
+const double Utils::getRandomDouble() {
+    double min = 0.1;
+    double max = 0.5;
+    double f = (double)rand() / RAND_MAX;
+    return min + f * (max - min);
 }
 
 string Utils::getLineByRandomNumber(int randNum, string fileName) {

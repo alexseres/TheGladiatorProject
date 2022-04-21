@@ -19,7 +19,9 @@ public:
     void setGladiatorNamesSize(int size){GladiatorNamesSize = size;}
     int const getRandomNumber(int max);
     int const getRandomNumber(int min, int max);
+    double const getRandomDouble();
     string getLineByRandomNumber(int randNum, string fileName);
+    const int getClampValue(int number);
 };
 
 

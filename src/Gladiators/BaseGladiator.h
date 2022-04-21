@@ -47,6 +47,9 @@ public:
     int getStarterHealth() const {return StarterHealth;}
     int getCurrentHealth() const {return CurrentHealth;}
     void increaseAbilities();
+    void decreaseHpBy(int decreaser);
+    void healUp(int increaser);
+    bool isDead = false;
 
 };
 
