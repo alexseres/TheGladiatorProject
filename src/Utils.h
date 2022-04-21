@@ -17,8 +17,8 @@ public:
     void setFileName(string fileName){FileName = fileName; }
     int getGladiatorNamesSize(){return GladiatorNamesSize;}
     void setGladiatorNamesSize(int size){GladiatorNamesSize = size;}
-    int getRandomNumber(int max);
-    int getRandomNumber(int min, int max);
+    int const getRandomNumber(int max);
+    int const getRandomNumber(int min, int max);
     string getLineByRandomNumber(int randNum, string fileName);
 };
 

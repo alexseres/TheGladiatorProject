@@ -29,4 +29,11 @@ TEST(GladiatorFactoryTest, generateGladiatorsTest){
     //Assign
     gf.generateGladiators();
 
+    EXPECT_TRUE(gf.GladiatorArr[0] != gf.GladiatorArr[1]);
+    for(BaseGladiator *gladiator : gf.GladiatorArr){
+        // just check if class members been initialized and increased
+        EXPECT_TRUE(gladiator->getGladiatorName().size() > 0);
+        EXPECT_TRUE(gladiator->getDEX() > 0 );
+        EXPECT_TRUE(gladiator->getGladiatorLevel() > 0 );
+    }
 }

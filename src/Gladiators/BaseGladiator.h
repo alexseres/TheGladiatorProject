@@ -35,12 +35,19 @@ public:
         StarterHealth = 100;
         CurrentHealth = 100;
     };
+    string getGladiatorName() const {return Name;}
     GladiatorType getGladiatorType(){return Type;}
     int getGladiatorLevel(){return Level;}
     double getHP() const {return HP;}
     double getSP() const {return SP;}
     double getDEX() const {return DEX;}
+    StaticticMultiplier getHpMultiplier() const {return hp_multiplier;}
+    StaticticMultiplier getSpMultiplier() const {return sp_multiplier;}
+    StaticticMultiplier getDexMultiplier() const {return dex_multiplier;}
+    int getStarterHealth() const {return StarterHealth;}
+    int getCurrentHealth() const {return CurrentHealth;}
     void increaseAbilities();
+
 };
 
 

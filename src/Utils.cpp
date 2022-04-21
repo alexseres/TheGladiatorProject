@@ -7,13 +7,11 @@
 #include <fstream>
 using namespace std;
 
-int Utils::getRandomNumber(int max) {
-    srand(time(NULL));
+const int Utils::getRandomNumber(int max) {
     return rand() % max + 1;
 }
 
-int Utils::getRandomNumber(int min, int max) {
-    srand(time(NULL));
+const int Utils::getRandomNumber(int min, int max) {
     return rand() % (max - min + 1) + min;
 }
 
@@ -31,7 +29,6 @@ string Utils::getLineByRandomNumber(int randNum, string fileName) {
             counter++;
         }
         file.close();
-
     }
     else{
         cout << "Unable to open file" << endl;
