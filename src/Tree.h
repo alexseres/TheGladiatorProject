@@ -4,11 +4,20 @@
 
 #ifndef THEGLADIATORPROJECT_TREE_H
 #define THEGLADIATORPROJECT_TREE_H
+#include "Gladiators/BaseGladiator.h"
+#include "Combat.h"
 
 
 class Tree {
-    void leftBranch();
-    void rightBranch();
+private:
+public:
+    Combat GladiatorCombat;
+    Tree *root;
+    Tree *leftBranch;
+    Tree *rightBranch;
+
+    Tree *newTree(Combat combat);
+//    Combat process(Tree *root, int val, vector<BaseGladiator> gladiators);
 };
 
 

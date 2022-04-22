@@ -39,3 +39,7 @@ void Combat::turn(BaseGladiator &attacker, BaseGladiator &defender) {
     CombatLogs.push_back(message);
     cout << message << endl;
 }
+
+BaseGladiator Combat::draft(BaseGladiator gl1, BaseGladiator gl2) {
+    return gl2;
+}

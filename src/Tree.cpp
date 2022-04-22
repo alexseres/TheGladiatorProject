@@ -3,3 +3,30 @@
 //
 
 #include "Tree.h"
+
+
+Tree *Tree::newTree(Combat combat) {
+    Tree *tree;
+    tree -> GladiatorCombat = combat;
+    tree -> leftBranch = nullptr;
+    tree -> rightBranch = nullptr;
+    return tree;
+}
+
+
+
+
+
+
+
+//void Tree::add() {
+//
+//}
+//
+//void Tree::leftBranch() {
+//
+//}
+//
+//void Tree::rightBranch() {
+//
+//}

@@ -13,6 +13,8 @@
 #include "Gladiators/Assassin.h"
 #include "Gladiators/Swordsman.h"
 #include "Gladiators/Brutal.h"
+#include "Tree.h"
+#include "Combat.h"
 
 using namespace std;
 
@@ -21,13 +23,21 @@ using namespace std;
 
 class Tournament {
 private:
+    Combat combat;
+    Tree tree;
     GladiatorFactory gladiatorFactory;
     vector<BaseGladiator> Gladiators;
+    int le = Gladiators.size()/2;
+    int ri = Gladiators.size();
 
 public:
+//    Tournament(Combat combat) : combat(combat) {
+//        fillGladiatorsVector();
+//    }
     void fillGladiatorsVector();
     void simulateTournament();
     vector<BaseGladiator> getGladiators(){return Gladiators;}
+    Tree *assigning(Tree *root, int val1, int val2, vector<BaseGladiator> gladiators);
 
 };
 

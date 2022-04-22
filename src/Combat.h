@@ -22,6 +22,7 @@ public:
     Combat(BaseGladiator g1, BaseGladiator g2): gladiator1(g1), gladiator2(g2){}
     void simulateCombat();
     void turn(BaseGladiator &attacker, BaseGladiator &defender);
+    BaseGladiator draft(BaseGladiator gl1, BaseGladiator gl2);
 
 };
 
