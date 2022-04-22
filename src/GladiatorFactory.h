@@ -16,9 +16,9 @@ private:
     GladiatorType GladiatorPossibilities[5] = {Archer, Assassin, Swordsman, Swordsman, Brutal};
 
 public:
-    int GladiatorPossibilitiesSize = 5;
     static const int GladiatorVectorSize = 64;
     BaseGladiator *GladiatorArr[GladiatorVectorSize];
+    int GladiatorPossibilitiesSize = 5;
     int GladiatorNameListSize = 45;
     string GladiatorFileName = "/Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/src/GladiatorPossibleNames.txt";
     Utils OwnUtils;

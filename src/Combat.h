@@ -20,7 +20,7 @@ private:
 
 public:
     Combat(BaseGladiator g1, BaseGladiator g2): gladiator1(g1), gladiator2(g2){}
-    void simulate();
+    void simulateCombat();
     void turn(BaseGladiator &attacker, BaseGladiator &defender);
 
 };

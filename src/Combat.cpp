@@ -1,7 +1,7 @@
 
 #include "Combat.h"
 
-void Combat::simulate() {
+void Combat::simulateCombat() {
     string message;
     bool firstStarts = true;
     while(gladiator1.getHP() > 0 || gladiator2.getHP() > 0){
