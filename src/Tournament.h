@@ -23,7 +23,7 @@ using namespace std;
 
 class Tournament {
 private:
-    Combat combat;
+    //Combat combat;
     Tree tree;
     GladiatorFactory gladiatorFactory;
     vector<BaseGladiator> Gladiators;
@@ -34,11 +34,13 @@ public:
 //    Tournament(Combat combat) : combat(combat) {
 //        fillGladiatorsVector();
 //    }
+
     void fillGladiatorsVector();
     void simulateTournament();
     vector<BaseGladiator> getGladiators(){return Gladiators;}
-    Tree *assigning(Tree *root, int val1, int val2, vector<BaseGladiator> gladiators);
+    Tree* assigning(vector<BaseGladiator> gladiators, int start, int end);
 
+    Tournament();
 };
 
 

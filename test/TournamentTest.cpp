@@ -3,10 +3,17 @@
 #include "../src/GladiatorFactory.h"
 #include "../src/Tournament.h"
 
-TEST(TournamentTest, fillGladiatorTests){
-//    Tournament tournament(Combat(BaseGladiator(), BaseGladiator()));
+TEST(TournamentTest, fillGladiatorTest){
+//    Tournament tournament;
 //    tournament.fillGladiatorsVector();
 //    int expectedGladiatorSize = 64;
 //    EXPECT_EQ(tournament.getGladiators().size() , expectedGladiatorSize);
+}
+
+TEST(TournamentTest, simulateTest){
+    Tournament tournament;
+    tournament.fillGladiatorsVector();
+    tournament.simulateTournament();
+
 
 }
