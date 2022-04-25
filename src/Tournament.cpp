@@ -17,10 +17,10 @@ void Tournament::simulateTournament() {
 //    int le = Gladiators.size()/2;
 //    int ri = Gladiators.size();
 
-    //Tree *root = tree.newTree(Combat(Gladiators[le], Gladiators[ri]));
-    assigning(Gladiators, 0, Gladiators.size() -1);
-}
 
+    assigning(Gladiators, 0, Gladiators.size());
+
+}
 
 Tree* Tournament::assigning(vector<BaseGladiator> gladiators, int start, int end) {
     if(start > end) return nullptr;
@@ -28,10 +28,21 @@ Tree* Tournament::assigning(vector<BaseGladiator> gladiators, int start, int end
     Combat combat(gladiators[mid], gladiators[end]);
     Tree *root = tree.newTree(combat);
     root->leftBranch = assigning(gladiators, start, mid - 1);
-    root->rightBranch = assigning(gladiators, start, mid + 1);
+    root->rightBranch = assigning(gladiators, mid + 1, end);
     return root;
-
 }
+
+
+
+//Tree* Tournament::assigning(vector<BaseGladiator> gladiators, int start, int end) {
+//    if(start > end) return nullptr;
+//    int mid = (start + end)/2;
+//    Combat combat(gladiators[mid], gladiators[end]);
+//    Tree *root = tree.newTree(combat);
+//    root->leftBranch = assigning(gladiators, start, mid - 1);
+//    root->rightBranch = assigning(gladiators, mid + 1, end);
+//    return root;
+//}
 
 
 //void Tournament::assigning(Tree *root, int leftValue, int rightValue, vector<BaseGladiator> gladiators) {
@@ -52,7 +63,5 @@ Tree* Tournament::assigning(vector<BaseGladiator> gladiators, int start, int end
 ////    root -> rightBranch = assigning(newTree, leftValue, rightValue, gladiators);
 //}
 
-Tournament::Tournament() {
 
-}
 

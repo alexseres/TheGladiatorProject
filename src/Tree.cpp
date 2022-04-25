@@ -6,12 +6,13 @@
 
 
 Tree *Tree::newTree(Combat combat) {
-    Tree *tree;
-    tree -> GladiatorCombat = combat;
+    Tree *tree = new Tree();
+    tree -> GladiatorCombat = &combat;
     tree -> leftBranch = nullptr;
     tree -> rightBranch = nullptr;
     return tree;
 }
+
 
 
 

@@ -11,7 +11,8 @@ TEST(TournamentTest, fillGladiatorTest){
 }
 
 TEST(TournamentTest, simulateTest){
-    Tournament tournament;
+    Tree tree;
+    Tournament tournament(tree);
     tournament.fillGladiatorsVector();
     tournament.simulateTournament();
 

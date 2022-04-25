@@ -11,7 +11,7 @@
 class Tree {
 private:
 public:
-    Combat GladiatorCombat;
+    Combat *GladiatorCombat;
     Tree *root;
     Tree *leftBranch;
     Tree *rightBranch;

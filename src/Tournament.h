@@ -5,6 +5,7 @@
 #ifndef THEGLADIATORPROJECT_TOURNAMENT_H
 #define THEGLADIATORPROJECT_TOURNAMENT_H
 #include <iostream>
+#include <utility>
 #include <vector>
 #include "Utils.h"
 #include "GladiatorFactory.h"
@@ -40,7 +41,7 @@ public:
     vector<BaseGladiator> getGladiators(){return Gladiators;}
     Tree* assigning(vector<BaseGladiator> gladiators, int start, int end);
 
-    Tournament();
+    explicit Tournament(Tree tree): tree(std::move(tree)){};
 };
 
 
