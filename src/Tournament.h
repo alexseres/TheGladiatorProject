@@ -32,15 +32,12 @@ private:
     int ri = Gladiators.size();
 
 public:
-//    Tournament(Combat combat) : combat(combat) {
-//        fillGladiatorsVector();
-//    }
-
     void fillGladiatorsVector();
     void simulateTournament();
     vector<BaseGladiator> getGladiators(){return Gladiators;}
-    Tree* assigning(vector<BaseGladiator> gladiators, int start, int end);
-
+    Tree* assigning(Tree* node,int start, int end);
+    Tree* buildTree(Tree* root,vector<BaseGladiator> gladiators, int start, int end);
+    vector<BaseGladiator> getSubVector(int start, int end);
     explicit Tournament(Tree tree): tree(std::move(tree)){};
 };
 

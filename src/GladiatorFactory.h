@@ -16,7 +16,7 @@ private:
     GladiatorType GladiatorPossibilities[5] = {Archer, Assassin, Swordsman, Swordsman, Brutal};
 
 public:
-    static const int GladiatorVectorSize = 8;
+    static const int GladiatorVectorSize = 4;
     BaseGladiator *GladiatorArr[GladiatorVectorSize];
     int GladiatorPossibilitiesSize = 5;
     int GladiatorNameListSize = 45;

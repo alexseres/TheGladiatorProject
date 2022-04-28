@@ -1,7 +1,8 @@
 
 #include "Combat.h"
 
-void Combat::simulateCombat() {
+void Combat::simulateCombat(BaseGladiator gladiator1, BaseGladiator gladiator2) {
+
     string message;
     bool firstStarts = true;
     while(gladiator1.getHP() > 0 || gladiator2.getHP() > 0){
@@ -40,6 +41,10 @@ void Combat::turn(BaseGladiator &attacker, BaseGladiator &defender) {
     cout << message << endl;
 }
 
-BaseGladiator Combat::draft(BaseGladiator gl1, BaseGladiator gl2) {
+BaseGladiator* Combat::draft(BaseGladiator *gl1, BaseGladiator *gl2) {
     return gl2;
+}
+
+Combat::Combat() {
+
 }

@@ -11,13 +11,18 @@
 class Tree {
 private:
 public:
-    Combat *GladiatorCombat;
+    BaseGladiator *gladiator;
     Tree *root;
-    Tree *leftBranch;
     Tree *rightBranch;
+    Tree *leftBranch;
+    int sign;
 
-    Tree *newTree(Combat combat);
-//    Combat process(Tree *root, int val, vector<BaseGladiator> gladiators);
+    Tree* newTree(BaseGladiator *gla);
+    Tree();
+    Tree* constructTree(vector<BaseGladiator> gladiators);
+    vector<BaseGladiator> slice(vector<BaseGladiator> const &v, int m, int n);
+    //Tree(BaseGladiator gla): gladiator(std::move(gla)){}
+
 };
 
 

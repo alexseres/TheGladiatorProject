@@ -3,6 +3,7 @@
 
 void Tournament::fillGladiatorsVector() {
     gladiatorFactory.generateGladiators();
+    int counter = 1;
     for(BaseGladiator *baseGladiator : gladiatorFactory.GladiatorArr){
         BaseGladiator gladiator = *baseGladiator;
         Gladiators.push_back(gladiator);
@@ -17,32 +18,74 @@ void Tournament::simulateTournament() {
 //    int le = Gladiators.size()/2;
 //    int ri = Gladiators.size();
 
+    Tree *championTree = tree.constructTree(Gladiators);
 
-    assigning(Gladiators, 0, Gladiators.size());
 
 }
 
-Tree* Tournament::assigning(vector<BaseGladiator> gladiators, int start, int end) {
-    if(start > end) return nullptr;
-    int mid = (start + end)/2;
-    Combat combat(gladiators[mid], gladiators[end]);
-    Tree *root = tree.newTree(combat);
-    root->leftBranch = assigning(gladiators, start, mid - 1);
-    root->rightBranch = assigning(gladiators, mid + 1, end);
-    return root;
-}
+
+//Tree* Tournament::buildTree(Tree *root,vector<BaseGladiator> gladiators) {
+//    if(gladiators.size() == 2){
+//
+//    }
+//    else{
+//        vector<BaseGladiator> leftSubVector = {gladiators.begin() +0, gladiators.end() + gladiators.size()/2};
+//        root->rightBranch = buildTree(leftSubVector);
+//    }
+//}
+
+//vector<BaseGladiator> Tournament::getSubVector(int start, int end) {
+//    vector<BaseGladiator> subGladiators;
+//    for(int i = start;i <= end; i++){
+//        subGladiators.push_back(Gladiators[i]);
+//    }
+//    return subGladiators;
+//}
 
 
-
-//Tree* Tournament::assigning(vector<BaseGladiator> gladiators, int start, int end) {
+//Tree* Tournament::buildTree(int start, int end) {
 //    if(start > end) return nullptr;
-//    int mid = (start + end)/2;
-//    Combat combat(gladiators[mid], gladiators[end]);
+//    Combat *combat;
 //    Tree *root = tree.newTree(combat);
-//    root->leftBranch = assigning(gladiators, start, mid - 1);
-//    root->rightBranch = assigning(gladiators, mid + 1, end);
+//
+//    //if the only node is left, then return node
+//    if(start == end) return root;
+//
+//    int leftStart = start + 1;
+//    int rightStart = leftStart + (end - leftStart + 1) / 2;
+//    int leftEnd = rightStart - 1;
+//    int rightEnd = end;
+//
+//    root -> leftBranch = buildTree(leftStart, leftEnd);
+//    root -> rightBranch = buildTree(rightStart, rightEnd);
 //    return root;
 //}
+
+//Tree* Tournament::buildTree(Tree* root, int start, int end) {
+//    if(start == end) return nullptr;
+//    int mid = (start + end)/2;
+////    Combat combat;
+//    Tree *node = tree.newTree();
+//    root->leftBranch = assigning(node, start, mid - 1);
+//    root->rightBranch = assigning(node, mid + 1, end);
+//    return node;
+//}
+
+//Tree* Tournament::assigning(Tree* root,int start, int end) {
+//    if(start >= end) return NULL;
+//    //int mid = (start + end)/2;
+//    int mid =(end - start)/ 2;
+//    root->leftBranch = assigning(root, start, mid - 1);
+//    root->rightBranch = assigning(root, mid + 1, end);
+//
+//    Combat combat(Gladiators[mid], Gladiators[end]);
+//    Tree* node = root->newTree(combat);
+//    return node;
+//}
+
+
+
+
 
 
 //void Tournament::assigning(Tree *root, int leftValue, int rightValue, vector<BaseGladiator> gladiators) {
