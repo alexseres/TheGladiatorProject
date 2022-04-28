@@ -21,8 +21,7 @@ protected:
     StaticticMultiplier hp_multiplier;
     StaticticMultiplier sp_multiplier;
     StaticticMultiplier dex_multiplier;
-    int StarterHealth;
-    int CurrentHealth;
+    double StarterHealth;
 public:
 //    BaseGladiator(GladiatorType type, string name, double hp, double sp, double dex, int level):Type(type),Name(name), HP(hp), SP(sp), DEX(dex), Level(level){
     BaseGladiator(GladiatorType type, string name, double hp, double sp, double dex, int level){
@@ -32,8 +31,7 @@ public:
         this-> SP = sp;
         this-> DEX = dex;
         this-> Level = level;
-        StarterHealth = 100;
-        CurrentHealth = 100;
+        StarterHealth = HP;
     };
     string getGladiatorName() const {return Name;}
     GladiatorType getGladiatorType(){return Type;}
@@ -45,10 +43,9 @@ public:
     StaticticMultiplier getSpMultiplier() const {return sp_multiplier;}
     StaticticMultiplier getDexMultiplier() const {return dex_multiplier;}
     int getStarterHealth() const {return StarterHealth;}
-    int getCurrentHealth() const {return CurrentHealth;}
     void increaseAbilities();
     void decreaseHpBy(int decreaser);
-    void healUp(int increaser);
+    void healUp();
     bool isDead = false;
 
 };

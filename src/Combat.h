@@ -18,7 +18,7 @@ private:
 
 public:
     Combat();
-    void simulateCombat(BaseGladiator gladiator1, BaseGladiator gladiator2);
+    BaseGladiator* simulateCombat(BaseGladiator &gladiator1, BaseGladiator &gladiator2);
     void turn(BaseGladiator &attacker, BaseGladiator &defender);
     BaseGladiator* draft(BaseGladiator *gl1, BaseGladiator *gl2);
 

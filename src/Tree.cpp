@@ -31,24 +31,18 @@ Tree::Tree() {
 
 Tree* Tree::constructTree(vector<BaseGladiator> gladiators) {
     if(gladiators.size() == 2){
-//        this->leftBranch = newTree(gladiators[0]);
-//        this->rightBranch = newTree(gladiators[1]);
         Combat combat;
-        BaseGladiator *winner = combat.draft(&gladiators[0],& gladiators[1]);
-        Tree *winnerTree = newTree(winner);
-        return winnerTree;
+        BaseGladiator *winner = combat.simulateCombat(gladiators[0], gladiators[1]);
+        return newTree(winner);
     }
     else{
-//        vector<BaseGladiator> rightSubVector = {gladiators.begin() +gladiators.size()/2, gladiators.end() + gladiators.size()};
-//        vector<BaseGladiator> leftSubVector = {gladiators.begin() +0, gladiators.end() + gladiators.size()/2};
         vector<BaseGladiator> rightSubVector = slice(gladiators, gladiators.size()/2, gladiators.size());
         vector<BaseGladiator> leftSubVector = slice(gladiators, 0, gladiators.size()/2);
         this -> rightBranch = constructTree(rightSubVector);
         this -> leftBranch = constructTree(leftSubVector);
-        BaseGladiator* gladiator1 = this -> rightBranch->gladiator;
-        BaseGladiator* gladiator2 = this -> leftBranch->gladiator;
         Combat combat;
-        BaseGladiator *winner = combat.draft(gladiator1, gladiator2);
+        BaseGladiator *winner = combat.simulateCombat(reinterpret_cast<BaseGladiator &>(this->rightBranch->gladiator),
+                                                      reinterpret_cast<BaseGladiator &>(this->leftBranch->gladiator));
         return newTree(winner);
     }
 }
@@ -58,7 +52,7 @@ vector<BaseGladiator> Tree::slice(vector<BaseGladiator> const &v, int m, int n)
     auto first = v.cbegin() + m;
     auto last = v.cbegin() + n;
 
-    std::vector<BaseGladiator> vec(first, last);
+    vector<BaseGladiator> vec(first, last);
     return vec;
 }
 
