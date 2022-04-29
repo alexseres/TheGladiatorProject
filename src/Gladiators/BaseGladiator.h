@@ -47,6 +47,8 @@ public:
     void decreaseHpBy(int decreaser);
     void healUp();
     bool isDead = false;
+    //~BaseGladiator(){delete this;}
+    BaseGladiator(){};
 
 };
 

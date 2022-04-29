@@ -25,7 +25,7 @@ using namespace std;
 class Tournament {
 private:
     //Combat combat;
-    Tree tree;
+//    Tree tree;
     GladiatorFactory gladiatorFactory;
     vector<BaseGladiator> Gladiators;
     int le = Gladiators.size()/2;
@@ -38,7 +38,7 @@ public:
     Tree* assigning(Tree* node,int start, int end);
     Tree* buildTree(Tree* root,vector<BaseGladiator> gladiators, int start, int end);
     vector<BaseGladiator> getSubVector(int start, int end);
-    explicit Tournament(Tree tree): tree(std::move(tree)){};
+//    explicit Tournament(Tree tree): tree(std::move(tree)){};
 };
 
 
