@@ -17,7 +17,7 @@ enable_testing()
 add_executable(BaseGladiatorTest BaseGladiatorTest.cpp ../src/Gladiators/BaseGladiator.cpp)
 add_executable(UtilsTest UtilsTest.cpp ../src/Utils.cpp)
 add_executable(GladiatorFactoryTest  GladiatorFactoryTest.cpp ../src/GladiatorFactory.cpp ../src/Utils.cpp ../src/Gladiators/BaseGladiator.cpp)
-add_executable(TournamentTest TournamentTest.cpp ../src/Tournament.cpp ../src/Combat.cpp ../src/GladiatorFactory.cpp ../src/Tree.cpp ../src/Utils.cpp ../src/Gladiators/BaseGladiator.cpp)
+add_executable(TournamentTest TournamentTest.cpp ../src/Tournament.cpp ../src/Combat.cpp ../src/GladiatorFactory.cpp ../src/Utils.cpp ../src/Gladiators/BaseGladiator.cpp)
 
 
 target_link_libraries(BaseGladiatorTest gtest_main)

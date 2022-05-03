@@ -14,31 +14,21 @@
 #include "Gladiators/Assassin.h"
 #include "Gladiators/Swordsman.h"
 #include "Gladiators/Brutal.h"
-#include "Tree.h"
 #include "Combat.h"
 
 using namespace std;
 
-
-
-
 class Tournament {
 private:
-    //Combat combat;
-//    Tree tree;
     GladiatorFactory gladiatorFactory;
     vector<BaseGladiator> Gladiators;
-    int le = Gladiators.size()/2;
-    int ri = Gladiators.size();
 
 public:
     void fillGladiatorsVector();
     void simulateTournament();
+    BaseGladiator knockOut(vector<BaseGladiator> gladiators, Combat combat);
     vector<BaseGladiator> getGladiators(){return Gladiators;}
-    Tree* assigning(Tree* node,int start, int end);
-    Tree* buildTree(Tree* root,vector<BaseGladiator> gladiators, int start, int end);
-    vector<BaseGladiator> getSubVector(int start, int end);
-//    explicit Tournament(Tree tree): tree(std::move(tree)){};
+    vector<BaseGladiator> sliceVector(vector<BaseGladiator> const &v, int m, int n);
 };
 
 

@@ -2,7 +2,6 @@
 
 
 void Tournament::fillGladiatorsVector() {
-    // if dereference pointers and assign it to an object, should the object be deleted explicitly?
     gladiatorFactory.generateGladiators();
     for(BaseGladiator *baseGladiator : gladiatorFactory.GladiatorArr){
         BaseGladiator gladiator = *baseGladiator;
@@ -11,13 +10,34 @@ void Tournament::fillGladiatorsVector() {
     }
 }
 
+BaseGladiator Tournament::knockOut(vector<BaseGladiator> gladiators, Combat combat){
+    if(gladiators.size() == 2){
+        BaseGladiator winner = combat.simulateCombat(gladiators[0], gladiators[1]);
+        return winner;
+    }
+    else{
+        vector<BaseGladiator> rightSubVector = sliceVector(gladiators, gladiators.size()/2, gladiators.size());
+        vector<BaseGladiator> leftSubVector = sliceVector(gladiators, 0, gladiators.size()/2);
+        BaseGladiator rightChampion = knockOut(rightSubVector, combat);
+        BaseGladiator leftChampion = knockOut(leftSubVector, combat);
+        BaseGladiator winner = combat.simulateCombat(rightChampion,leftChampion);
+        return winner;
+    }
+}
+
+vector<BaseGladiator> Tournament::sliceVector(vector<BaseGladiator> const &v, int m, int n)
+{
+    auto first = v.cbegin() + m;
+    auto last = v.cbegin() + n;
+
+    vector<BaseGladiator> vec(first, last);
+    return vec;
+}
+
 void Tournament::simulateTournament() {
-
-    Tree t(Gladiators[0]);
-    //Tree* newt = t.constructTree(Gladiators);
-    Tree *championTree = t.constructTree(Gladiators);
-    cout << "Champion is " + championTree->gladiator->getGladiatorName() + ".";
-
+    Combat combat;
+    BaseGladiator champion = knockOut(Gladiators, combat);
+    cout << "Champion is " + champion.getGladiatorName() + ".";
 }
 
 

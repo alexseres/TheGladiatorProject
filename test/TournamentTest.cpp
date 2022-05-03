@@ -11,10 +11,7 @@ TEST(TournamentTest, fillGladiatorTest){
 }
 
 TEST(TournamentTest, simulateTest){
-
     Tournament tournament;
     tournament.fillGladiatorsVector();
     tournament.simulateTournament();
-
-
 }
