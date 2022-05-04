@@ -210,6 +210,67 @@ build test/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
 build test/edit_cache: phony test/CMakeFiles/edit_cache.util
 
 # =============================================================================
+# Object build statements for EXECUTABLE target CombatTest
+
+
+#############################################
+# Order-only phony target for CombatTest
+
+build cmake_object_order_depends_target_CombatTest: phony || cmake_object_order_depends_target_gtest cmake_object_order_depends_target_gtest_main
+
+build test/CMakeFiles/CombatTest.dir/CombatTest.cpp.o: CXX_COMPILER__CombatTest_Debug /Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/test/CombatTest.cpp || cmake_object_order_depends_target_CombatTest
+  DEP_FILE = test/CMakeFiles/CombatTest.dir/CombatTest.cpp.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -mmacosx-version-min=10.15 -std=gnu++14
+  INCLUDES = -I/Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/src -isystem /Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/cmake-build-debug/_deps/googletest-src/googletest/include -isystem /Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/cmake-build-debug/_deps/googletest-src/googletest
+  OBJECT_DIR = test/CMakeFiles/CombatTest.dir
+  OBJECT_FILE_DIR = test/CMakeFiles/CombatTest.dir
+
+build test/CMakeFiles/CombatTest.dir/__/src/Combat.cpp.o: CXX_COMPILER__CombatTest_Debug /Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/src/Combat.cpp || cmake_object_order_depends_target_CombatTest
+  DEP_FILE = test/CMakeFiles/CombatTest.dir/__/src/Combat.cpp.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -mmacosx-version-min=10.15 -std=gnu++14
+  INCLUDES = -I/Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/src -isystem /Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/cmake-build-debug/_deps/googletest-src/googletest/include -isystem /Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/cmake-build-debug/_deps/googletest-src/googletest
+  OBJECT_DIR = test/CMakeFiles/CombatTest.dir
+  OBJECT_FILE_DIR = test/CMakeFiles/CombatTest.dir/__/src
+
+build test/CMakeFiles/CombatTest.dir/__/src/GladiatorFactory.cpp.o: CXX_COMPILER__CombatTest_Debug /Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/src/GladiatorFactory.cpp || cmake_object_order_depends_target_CombatTest
+  DEP_FILE = test/CMakeFiles/CombatTest.dir/__/src/GladiatorFactory.cpp.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -mmacosx-version-min=10.15 -std=gnu++14
+  INCLUDES = -I/Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/src -isystem /Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/cmake-build-debug/_deps/googletest-src/googletest/include -isystem /Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/cmake-build-debug/_deps/googletest-src/googletest
+  OBJECT_DIR = test/CMakeFiles/CombatTest.dir
+  OBJECT_FILE_DIR = test/CMakeFiles/CombatTest.dir/__/src
+
+build test/CMakeFiles/CombatTest.dir/__/src/Utils.cpp.o: CXX_COMPILER__CombatTest_Debug /Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/src/Utils.cpp || cmake_object_order_depends_target_CombatTest
+  DEP_FILE = test/CMakeFiles/CombatTest.dir/__/src/Utils.cpp.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -mmacosx-version-min=10.15 -std=gnu++14
+  INCLUDES = -I/Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/src -isystem /Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/cmake-build-debug/_deps/googletest-src/googletest/include -isystem /Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/cmake-build-debug/_deps/googletest-src/googletest
+  OBJECT_DIR = test/CMakeFiles/CombatTest.dir
+  OBJECT_FILE_DIR = test/CMakeFiles/CombatTest.dir/__/src
+
+build test/CMakeFiles/CombatTest.dir/__/src/Gladiators/BaseGladiator.cpp.o: CXX_COMPILER__CombatTest_Debug /Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/src/Gladiators/BaseGladiator.cpp || cmake_object_order_depends_target_CombatTest
+  DEP_FILE = test/CMakeFiles/CombatTest.dir/__/src/Gladiators/BaseGladiator.cpp.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -mmacosx-version-min=10.15 -std=gnu++14
+  INCLUDES = -I/Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/src -isystem /Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/cmake-build-debug/_deps/googletest-src/googletest/include -isystem /Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/cmake-build-debug/_deps/googletest-src/googletest
+  OBJECT_DIR = test/CMakeFiles/CombatTest.dir
+  OBJECT_FILE_DIR = test/CMakeFiles/CombatTest.dir/__/src/Gladiators
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target CombatTest
+
+
+#############################################
+# Link the executable test/CombatTest
+
+build test/CombatTest: CXX_EXECUTABLE_LINKER__CombatTest_Debug test/CMakeFiles/CombatTest.dir/CombatTest.cpp.o test/CMakeFiles/CombatTest.dir/__/src/Combat.cpp.o test/CMakeFiles/CombatTest.dir/__/src/GladiatorFactory.cpp.o test/CMakeFiles/CombatTest.dir/__/src/Utils.cpp.o test/CMakeFiles/CombatTest.dir/__/src/Gladiators/BaseGladiator.cpp.o | lib/libgtest_maind.a lib/libgtestd.a || lib/libgtest_maind.a lib/libgtestd.a
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -mmacosx-version-min=10.15
+  LINK_LIBRARIES = lib/libgtest_maind.a  lib/libgtestd.a
+  OBJECT_DIR = test/CMakeFiles/CombatTest.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = test/CombatTest
+  TARGET_PDB = CombatTest.dbg
+
+# =============================================================================
 # Object build statements for EXECUTABLE target TournamentTest
 
 
@@ -794,6 +855,8 @@ build lib/libgtestd.a: CXX_STATIC_LIBRARY_LINKER__gtest_Debug _deps/googletest-b
 
 build BaseGladiatorTest: phony test/BaseGladiatorTest
 
+build CombatTest: phony test/CombatTest
+
 build GladiatorFactoryTest: phony test/GladiatorFactoryTest
 
 build TournamentTest: phony test/TournamentTest
@@ -859,7 +922,7 @@ build src/all: phony
 #############################################
 # Folder: /Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/cmake-build-debug/test
 
-build test/all: phony test/TournamentTest test/GladiatorFactoryTest test/UtilsTest test/BaseGladiatorTest _deps/googletest-build/all
+build test/all: phony test/CombatTest test/TournamentTest test/GladiatorFactoryTest test/UtilsTest test/BaseGladiatorTest _deps/googletest-build/all
 
 # =============================================================================
 # Built-in targets

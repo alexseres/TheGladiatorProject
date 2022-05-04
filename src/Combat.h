@@ -20,6 +20,7 @@ public:
     void announceWinner(BaseGladiator &winner,BaseGladiator &looser, string &message);
     BaseGladiator simulateCombat(BaseGladiator gladiator1, BaseGladiator gladiator2);
     void turn(BaseGladiator &attacker, BaseGladiator &defender);
+    vector<string> getCombatLogs(){return CombatLogs;}
 };
 
 

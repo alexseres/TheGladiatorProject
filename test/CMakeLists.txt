@@ -18,17 +18,19 @@ add_executable(BaseGladiatorTest BaseGladiatorTest.cpp ../src/Gladiators/BaseGla
 add_executable(UtilsTest UtilsTest.cpp ../src/Utils.cpp)
 add_executable(GladiatorFactoryTest  GladiatorFactoryTest.cpp ../src/GladiatorFactory.cpp ../src/Utils.cpp ../src/Gladiators/BaseGladiator.cpp)
 add_executable(TournamentTest TournamentTest.cpp ../src/Tournament.cpp ../src/Combat.cpp ../src/GladiatorFactory.cpp ../src/Utils.cpp ../src/Gladiators/BaseGladiator.cpp)
-
+add_executable(CombatTest CombatTest.cpp ../src/Combat.cpp ../src/GladiatorFactory.cpp ../src/Utils.cpp ../src/Gladiators/BaseGladiator.cpp)
 
 target_link_libraries(BaseGladiatorTest gtest_main)
 target_link_libraries(UtilsTest gtest_main)
 target_link_libraries(GladiatorFactoryTest gtest_main)
 target_link_libraries(TournamentTest gtest_main)
+target_link_libraries(CombatTest gtest_main)
 
 add_test(NAME BaseGladiatorTest COMMAND test1)
 add_test(NAME util_t COMMAND randomNumberTest)
 add_test(NAME GladiatorFactoryTest COMMAND generateGladiatorTest generateGladiatorsTest)
 add_test(NAME TournamentTest COMMAND fillGladiatorsTest simulateTest sliceVectorTest knockOutTes)
+add_test(NAME CombatTest COMMAND simulateCombatTest turnTest announceWinnerTest)
 
 #include(GoogleTest)
 #gtest_discover_tests(

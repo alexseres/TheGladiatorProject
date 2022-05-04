@@ -17,7 +17,8 @@ BaseGladiator Combat::simulateCombat(BaseGladiator gladiator1, BaseGladiator gla
     while(gladiator1.getHP() > 0 && gladiator2.getHP() > 0 && turnCounter < 101){
         firstStarts ? turn(gladiator1, gladiator2) : turn(gladiator2, gladiator1);
         //!firstStarts || (firstStarts = false);  //check if firstStarts was true then it will be false and vice versa
-        if(firstStarts) firstStarts = false; else firstStarts = true;
+        if(firstStarts) firstStarts = false;
+        else firstStarts = true;
         ++turnCounter;
     }
 
@@ -48,6 +49,7 @@ void Combat::announceWinner(BaseGladiator &winner, BaseGladiator &looser, string
     CombatLogs.push_back(message);
     cout << message << endl;
     message ="Winner " +  winner.getGladiatorName() +" increased to:  (" +"HP: " + to_string(winner.getHP()) + ", SP: " +  to_string(winner.getSP()) + ", DEX: " + to_string(winner.getDEX()) + ", Level: "  + to_string(winner.getGladiatorLevel()) + ")";
+    CombatLogs.push_back(message);
     cout << message << endl;
 }
 

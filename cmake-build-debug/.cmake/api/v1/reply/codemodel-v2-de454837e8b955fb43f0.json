@@ -51,7 +51,8 @@
 						0,
 						1,
 						2,
-						3
+						3,
+						4
 					]
 				},
 				{
@@ -77,7 +78,7 @@
 						5
 					],
 					"hasInstallRule" : true,
-					"jsonFile" : "directory-_deps.googletest-build.googlemock-Debug-957fa800848b95d88f54.json",
+					"jsonFile" : "directory-_deps.googletest-build.googlemock-Debug-d118f77af501fe40b92c.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "2.8.12"
@@ -87,14 +88,14 @@
 					"source" : "cmake-build-debug/_deps/googletest-src/googlemock",
 					"targetIndexes" : 
 					[
-						4,
-						5
+						5,
+						6
 					]
 				},
 				{
 					"build" : "_deps/googletest-build/googletest",
 					"hasInstallRule" : true,
-					"jsonFile" : "directory-_deps.googletest-build.googletest-Debug-d5250250b36f3b09dec9.json",
+					"jsonFile" : "directory-_deps.googletest-build.googletest-Debug-3e7c8ee3d548b5507641.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "2.8.12"
@@ -104,8 +105,8 @@
 					"source" : "cmake-build-debug/_deps/googletest-src/googletest",
 					"targetIndexes" : 
 					[
-						6,
-						7
+						7,
+						8
 					]
 				}
 			],
@@ -129,7 +130,8 @@
 						0,
 						1,
 						2,
-						3
+						3,
+						4
 					]
 				},
 				{
@@ -157,8 +159,8 @@
 					"parentIndex" : 1,
 					"targetIndexes" : 
 					[
-						4,
-						5
+						5,
+						6
 					]
 				},
 				{
@@ -170,8 +172,8 @@
 					"parentIndex" : 2,
 					"targetIndexes" : 
 					[
-						6,
-						7
+						7,
+						8
 					]
 				}
 			],
@@ -180,28 +182,35 @@
 				{
 					"directoryIndex" : 2,
 					"id" : "BaseGladiatorTest::@36f028580bb02cc8272a",
-					"jsonFile" : "target-BaseGladiatorTest-Debug-2171be02c3c8e6b9e6ac.json",
+					"jsonFile" : "target-BaseGladiatorTest-Debug-c1dc3f901b4f99c2d332.json",
 					"name" : "BaseGladiatorTest",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 2,
+					"id" : "CombatTest::@36f028580bb02cc8272a",
+					"jsonFile" : "target-CombatTest-Debug-08952048639a5b7fb9f9.json",
+					"name" : "CombatTest",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
 					"id" : "GladiatorFactoryTest::@36f028580bb02cc8272a",
-					"jsonFile" : "target-GladiatorFactoryTest-Debug-e43c727ebf008ecaebcc.json",
+					"jsonFile" : "target-GladiatorFactoryTest-Debug-515c9bd6c348cb88de32.json",
 					"name" : "GladiatorFactoryTest",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 2,
 					"id" : "TournamentTest::@36f028580bb02cc8272a",
-					"jsonFile" : "target-TournamentTest-Debug-c91e905684445d33c63a.json",
+					"jsonFile" : "target-TournamentTest-Debug-b0f8b7d3cff6919e6b9f.json",
 					"name" : "TournamentTest",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 2,
 					"id" : "UtilsTest::@36f028580bb02cc8272a",
-					"jsonFile" : "target-UtilsTest-Debug-399e8b0629a8f9e01c8b.json",
+					"jsonFile" : "target-UtilsTest-Debug-9299a7ea47ded5252d41.json",
 					"name" : "UtilsTest",
 					"projectIndex" : 0
 				},

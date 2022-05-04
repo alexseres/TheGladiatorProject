@@ -13,6 +13,7 @@
 /Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/cmake-build-debug/test/CMakeFiles/install/local.dir
 /Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/cmake-build-debug/test/CMakeFiles/list_install_components.dir
 /Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/cmake-build-debug/test/CMakeFiles/edit_cache.dir
+/Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/cmake-build-debug/test/CMakeFiles/CombatTest.dir
 /Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/cmake-build-debug/test/CMakeFiles/TournamentTest.dir
 /Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/cmake-build-debug/test/CMakeFiles/install/strip.dir
 /Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/cmake-build-debug/test/CMakeFiles/install.dir
