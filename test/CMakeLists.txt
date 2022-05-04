@@ -28,7 +28,7 @@ target_link_libraries(TournamentTest gtest_main)
 add_test(NAME BaseGladiatorTest COMMAND test1)
 add_test(NAME util_t COMMAND randomNumberTest)
 add_test(NAME GladiatorFactoryTest COMMAND generateGladiatorTest generateGladiatorsTest)
-add_test(NAME TournamentTest COMMAND fillGladiatorsTest simulateTest)
+add_test(NAME TournamentTest COMMAND fillGladiatorsTest simulateTest sliceVectorTest knockOutTes)
 
 #include(GoogleTest)
 #gtest_discover_tests(

@@ -22,13 +22,19 @@ class Tournament {
 private:
     GladiatorFactory gladiatorFactory;
     vector<BaseGladiator> Gladiators;
+    BaseGladiator *Champion;
+    int fightCounter = 0;
+
 
 public:
     void fillGladiatorsVector();
     void simulateTournament();
     BaseGladiator knockOut(vector<BaseGladiator> gladiators, Combat combat);
-    vector<BaseGladiator> getGladiators(){return Gladiators;}
     vector<BaseGladiator> sliceVector(vector<BaseGladiator> const &v, int m, int n);
+    vector<BaseGladiator> getGladiators(){return Gladiators;}
+    int getFightCounter(){return fightCounter;}
+
+
 };
 
 

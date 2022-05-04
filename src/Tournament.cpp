@@ -12,7 +12,7 @@ void Tournament::fillGladiatorsVector() {
 
 BaseGladiator Tournament::knockOut(vector<BaseGladiator> gladiators, Combat combat){
     if(gladiators.size() == 2){
-        BaseGladiator winner = combat.simulateCombat(gladiators[0], gladiators[1]);
+        BaseGladiator winner = combat.simulateCombat(gladiators[0], gladiators[1]); ++fightCounter;
         return winner;
     }
     else{
@@ -20,13 +20,12 @@ BaseGladiator Tournament::knockOut(vector<BaseGladiator> gladiators, Combat comb
         vector<BaseGladiator> leftSubVector = sliceVector(gladiators, 0, gladiators.size()/2);
         BaseGladiator rightChampion = knockOut(rightSubVector, combat);
         BaseGladiator leftChampion = knockOut(leftSubVector, combat);
-        BaseGladiator winner = combat.simulateCombat(rightChampion,leftChampion);
+        BaseGladiator winner = combat.simulateCombat(rightChampion,leftChampion); ++fightCounter;
         return winner;
     }
 }
 
-vector<BaseGladiator> Tournament::sliceVector(vector<BaseGladiator> const &v, int m, int n)
-{
+vector<BaseGladiator> Tournament::sliceVector(vector<BaseGladiator> const &v, int m, int n){
     auto first = v.cbegin() + m;
     auto last = v.cbegin() + n;
 
@@ -37,7 +36,8 @@ vector<BaseGladiator> Tournament::sliceVector(vector<BaseGladiator> const &v, in
 void Tournament::simulateTournament() {
     Combat combat;
     BaseGladiator champion = knockOut(Gladiators, combat);
-    cout << "Champion is " + champion.getGladiatorName() + ".";
+    Champion = &champion;
+    cout << "Champion is " + Champion->getGladiatorName() + ".";
 }
 
 
