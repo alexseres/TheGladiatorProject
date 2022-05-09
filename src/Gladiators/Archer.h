@@ -8,8 +8,8 @@
 class Archer : public BaseGladiator{
 private:
 public:
-    Archer(GladiatorType type, string name, double hp, double sp, double dex, int level):
-    BaseGladiator(type, name, hp, sp, dex, level){
+    Archer(GladiatorType type, string name, int hp, int sp, int dex, int level, int weaponEffect):
+    BaseGladiator(type, name, hp, sp, dex, level, weaponEffect){
         hp_multiplier = Medium;
         sp_multiplier = Medium;
         dex_multiplier = High;

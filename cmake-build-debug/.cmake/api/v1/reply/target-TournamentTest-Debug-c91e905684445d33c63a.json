@@ -2,7 +2,7 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "test/UtilsTest"
+			"path" : "test/TournamentTest"
 		}
 	],
 	"backtrace" : 1,
@@ -27,13 +27,13 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 18,
+				"line" : 20,
 				"parent" : 0
 			},
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 24,
+				"line" : 26,
 				"parent" : 0
 			},
 			{
@@ -88,7 +88,11 @@
 			"sourceIndexes" : 
 			[
 				0,
-				1
+				1,
+				2,
+				3,
+				4,
+				5
 			]
 		}
 	],
@@ -96,14 +100,14 @@
 	[
 		{
 			"backtrace" : 2,
-			"id" : "gtest::@1ea2dfc0605fe3ab2a3f"
+			"id" : "gtest_main::@1ea2dfc0605fe3ab2a3f"
 		},
 		{
 			"backtrace" : 2,
-			"id" : "gtest_main::@1ea2dfc0605fe3ab2a3f"
+			"id" : "gtest::@1ea2dfc0605fe3ab2a3f"
 		}
 	],
-	"id" : "UtilsTest::@36f028580bb02cc8272a",
+	"id" : "TournamentTest::@36f028580bb02cc8272a",
 	"link" : 
 	{
 		"commandFragments" : 
@@ -128,8 +132,8 @@
 		],
 		"language" : "CXX"
 	},
-	"name" : "UtilsTest",
-	"nameOnDisk" : "UtilsTest",
+	"name" : "TournamentTest",
+	"nameOnDisk" : "TournamentTest",
 	"paths" : 
 	{
 		"build" : "test",
@@ -142,7 +146,11 @@
 			"sourceIndexes" : 
 			[
 				0,
-				1
+				1,
+				2,
+				3,
+				4,
+				5
 			]
 		}
 	],
@@ -151,13 +159,37 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "test/UtilsTest.cpp",
+			"path" : "test/TournamentTest.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/Tournament.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/Combat.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/GladiatorFactory.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
 			"path" : "src/Utils.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/Gladiators/BaseGladiator.cpp",
 			"sourceGroupIndex" : 0
 		}
 	],

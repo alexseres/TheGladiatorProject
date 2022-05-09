@@ -1,7 +1,3 @@
-//
-// Created by Alex Seres on 21/04/2022.
-//
-
 #ifndef THEGLADIATORPROJECT_COMBAT_H
 #define THEGLADIATORPROJECT_COMBAT_H
 

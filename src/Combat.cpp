@@ -15,8 +15,9 @@ BaseGladiator Combat::simulateCombat(BaseGladiator gladiator1, BaseGladiator gla
     int turnCounter = 0;
 
     while(gladiator1.getHP() > 0 && gladiator2.getHP() > 0 && turnCounter < 101){
+        //if gladiator poisoned, make a separate function to it
+
         firstStarts ? turn(gladiator1, gladiator2) : turn(gladiator2, gladiator1);
-        //!firstStarts || (firstStarts = false);  //check if firstStarts was true then it will be false and vice versa
         if(firstStarts) firstStarts = false;
         else firstStarts = true;
         ++turnCounter;
@@ -67,6 +68,16 @@ void Combat::turn(BaseGladiator &attacker, BaseGladiator &defender) {
         int decreaser = attacker.getSP() * util.getRandomDouble();
         defender.decreaseHpBy(decreaser);
         message =  attacker.getGladiatorName() + " Hits " + defender.getGladiatorName() + " with " + to_string(decreaser) + " damage.";
+        defender.isWeaponized = true;
+
+        //if(attacker.hasWeaponEffect) attacker.weapon.weaponize(defender);
+        if(attacker.hasWeaponEffect){
+            int chanceToWeaponize = util.getRandomNumber(100);
+            if(chanceToWeaponize <= attacker.weapon.getChanceToOccur()){
+                int damage = attacker.weapon.makeDamage(defender.getHP(), defender.isWeaponized);
+                defender.decreaseHpBy(damage);            }
+
+        }
     }
     else{
         //missed

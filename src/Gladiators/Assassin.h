@@ -9,7 +9,7 @@
 
 class Assassin : public BaseGladiator {
 public:
-    Assassin(GladiatorType type, string name, double hp, double sp, double dex, int level): BaseGladiator(type, name, hp, sp, dex, level){
+    Assassin(GladiatorType type, string name, int hp, int sp, int dex, int level, bool weaponEffect): BaseGladiator(type, name, hp, sp, dex, level, weaponEffect){
         Type = type;
         hp_multiplier = Low;
         sp_multiplier = High;
