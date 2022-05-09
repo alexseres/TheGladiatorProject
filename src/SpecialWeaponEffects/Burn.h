@@ -7,11 +7,9 @@
 
 #include <iostream>
 #include "SpecialWeaponEffects/SpecialWeaponEffect.h"
-#include "../Utils.h"
+
 
 class Burn : public SpecialWeaponEffect{
-private:
-    Utils util;
 public:
     Burn(){
         turnCounter = util.getRandomNumber(1,5);

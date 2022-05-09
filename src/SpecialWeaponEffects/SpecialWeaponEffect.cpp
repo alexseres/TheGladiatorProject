@@ -11,7 +11,7 @@ int SpecialWeaponEffect::makeDamage(int hp, bool &isWeaponized) {
 
     }
     else{
-        isWeaponized = true;
+        isWeaponized = false;
         return 0;
     }
 }

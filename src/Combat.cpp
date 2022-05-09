@@ -15,7 +15,6 @@ BaseGladiator Combat::simulateCombat(BaseGladiator gladiator1, BaseGladiator gla
     int turnCounter = 0;
 
     while(gladiator1.getHP() > 0 && gladiator2.getHP() > 0 && turnCounter < 101){
-        //if gladiator poisoned, make a separate function to it
 
         firstStarts ? turn(gladiator1, gladiator2) : turn(gladiator2, gladiator1);
         if(firstStarts) firstStarts = false;
@@ -43,18 +42,49 @@ BaseGladiator Combat::simulateCombat(BaseGladiator gladiator1, BaseGladiator gla
     }
 }
 
-void Combat::announceWinner(BaseGladiator &winner, BaseGladiator &looser, string &message) {
-    winner.increaseAbilities();
-    winner.healUp();
-    message = winner.getGladiatorName() + " has won. " + looser.getGladiatorName() + " is dead.";
-    CombatLogs.push_back(message);
-    cout << message << endl;
-    message ="Winner " +  winner.getGladiatorName() +" increased to:  (" +"HP: " + to_string(winner.getHP()) + ", SP: " +  to_string(winner.getSP()) + ", DEX: " + to_string(winner.getDEX()) + ", Level: "  + to_string(winner.getGladiatorLevel()) + ")";
-    CombatLogs.push_back(message);
-    cout << message << endl;
+void Combat::checkIfIsWeaponized(BaseGladiator &gladiator) {
+    string message;
+    if(gladiator.isWeaponized){
+        if(!(typeid(gladiator.weapon).name() == "Paralyze")){
+            int damage = gladiator.weapon.makeDamage(gladiator.getHP(), gladiator.isWeaponized);
+            gladiator.decreaseHpBy(damage);
+            message = gladiator.getGladiatorName() + " is damaged by " + to_string(damage) +  ", because of effect";
+            CombatLogs.push_back(message);
+            cout << message << endl;
+        }
+    }
+}
+
+bool Combat::checkIfIsParalyzed(BaseGladiator &attacker, BaseGladiator &defender) {
+    string message;
+    if(attacker.isWeaponized){
+        if(typeid(attacker.weapon).name() == "Paralyze"){
+            message = attacker.getGladiatorName() + " misses this turn, because he is paralyzed";
+            CombatLogs.push_back(message);
+            cout << message << endl;
+            return true;
+        }
+    }
+    if(defender.isWeaponized){
+        if(typeid(defender.weapon).name() == "Paralyze"){
+            int damage = attacker.weapon.makeDamage(attacker.getSP(), defender.isWeaponized);
+            defender.decreaseHpBy(damage);
+            message = defender.getGladiatorName() + " is damaged by " + to_string(damage) +  ", because of effect";
+            CombatLogs.push_back(message);
+            cout << message << endl;
+            return true;
+        }
+    }
+    return false;
 }
 
 void Combat::turn(BaseGladiator &attacker, BaseGladiator &defender) {
+    checkIfIsWeaponized(attacker);
+    checkIfIsWeaponized(defender);
+    bool skipRest = checkIfIsParalyzed(attacker, defender);
+    if(attacker.isDead || defender.isDead) return;
+    if(skipRest) return;
+
     string message;
     message = attacker.getGladiatorName() + " turns.";
     CombatLogs.push_back(message);
@@ -65,18 +95,16 @@ void Combat::turn(BaseGladiator &attacker, BaseGladiator &defender) {
     int percentage = util.getRandomNumber(100);
     if(chance > percentage){
         //hit been successful
-        int decreaser = attacker.getSP() * util.getRandomDouble();
+        int decreaser = (int)attacker.getSP() * util.getRandomDouble();
         defender.decreaseHpBy(decreaser);
         message =  attacker.getGladiatorName() + " Hits " + defender.getGladiatorName() + " with " + to_string(decreaser) + " damage.";
-        defender.isWeaponized = true;
 
         //if(attacker.hasWeaponEffect) attacker.weapon.weaponize(defender);
-        if(attacker.hasWeaponEffect){
+        if(attacker.hasWeaponEffect) {
             int chanceToWeaponize = util.getRandomNumber(100);
-            if(chanceToWeaponize <= attacker.weapon.getChanceToOccur()){
-                int damage = attacker.weapon.makeDamage(defender.getHP(), defender.isWeaponized);
-                defender.decreaseHpBy(damage);            }
-
+            if (chanceToWeaponize <= attacker.weapon.getChanceToOccur()) {
+                defender.isWeaponized = true;
+            }
         }
     }
     else{
@@ -87,3 +115,13 @@ void Combat::turn(BaseGladiator &attacker, BaseGladiator &defender) {
     cout << message << endl;
 }
 
+void Combat::announceWinner(BaseGladiator &winner, BaseGladiator &looser, string &message) {
+    winner.increaseAbilities();
+    winner.healUp();
+    message = winner.getGladiatorName() + " has won. " + looser.getGladiatorName() + " is dead.";
+    CombatLogs.push_back(message);
+    cout << message << endl;
+    message ="Winner " +  winner.getGladiatorName() +" increased to:  (" +"HP: " + to_string(winner.getHP()) + ", SP: " +  to_string(winner.getSP()) + ", DEX: " + to_string(winner.getDEX()) + ", Level: "  + to_string(winner.getGladiatorLevel()) + ")";
+    CombatLogs.push_back(message);
+    cout << message << endl;
+}

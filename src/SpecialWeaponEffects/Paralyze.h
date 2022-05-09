@@ -14,6 +14,7 @@ public:
         turnCounter = 3;
         chanceToOccur = 10;
     }
+    int makeDamage(int sp, bool &isWeaponized) override;
 };
 
 

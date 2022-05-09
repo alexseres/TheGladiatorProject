@@ -2,17 +2,19 @@
 #define THEGLADIATORPROJECT_SPECIALWEAPONEFFECT_H
 
 #include <iostream>
+#include "../Utils.h"
 using namespace std;
 
 
 class SpecialWeaponEffect {
 
 protected:
+    Utils util;
     int turnCounter;
     int decreaser;
     int chanceToOccur;
 public:
-    int makeDamage(int hp, bool &isWeaponized);
+    virtual int makeDamage(int hp, bool &isWeaponized);
     int getChanceToOccur(){return chanceToOccur;};
 };
 
