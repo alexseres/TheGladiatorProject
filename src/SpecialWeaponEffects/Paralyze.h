@@ -11,7 +11,7 @@
 class Paralyze : public SpecialWeaponEffect {
 public:
     Paralyze(){
-        turnCounter = 3;
+        turnCounter = 4;
         chanceToOccur = 10;
     }
     int makeDamage(int sp, bool &isWeaponized) override;

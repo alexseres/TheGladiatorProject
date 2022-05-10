@@ -15,7 +15,6 @@ BaseGladiator Combat::simulateCombat(BaseGladiator gladiator1, BaseGladiator gla
     int turnCounter = 0;
 
     while(gladiator1.getHP() > 0 && gladiator2.getHP() > 0 && turnCounter < 101){
-
         firstStarts ? turn(gladiator1, gladiator2) : turn(gladiator2, gladiator1);
         if(firstStarts) firstStarts = false;
         else firstStarts = true;
@@ -43,10 +42,24 @@ BaseGladiator Combat::simulateCombat(BaseGladiator gladiator1, BaseGladiator gla
 }
 
 void Combat::checkIfIsWeaponized(BaseGladiator &gladiator) {
-    string message;
     if(gladiator.isWeaponized){
-        if(!(typeid(gladiator.weapon).name() == "Paralyze")){
-            int damage = gladiator.weapon.makeDamage(gladiator.getHP(), gladiator.isWeaponized);
+        if(typeid(gladiator.weapon).name() == "Paralyze"){
+            return;
+        }
+        else{
+            string message;
+            int damage = -1;
+            if(typeid(gladiator.weapon).name() == "Poison"){
+                damage = gladiator.weapon.makeDamage(gladiator.getHP(), gladiator.isWeaponized);
+                if(damage == -1){
+                    //-1 only returns in Poison class
+                    gladiator.isDead = true;
+                    return;
+                }
+            }
+            else{
+                damage = gladiator.weapon.makeDamage(gladiator.getHP(), gladiator.isWeaponized);
+            }
             gladiator.decreaseHpBy(damage);
             message = gladiator.getGladiatorName() + " is damaged by " + to_string(damage) +  ", because of effect";
             CombatLogs.push_back(message);
@@ -56,20 +69,23 @@ void Combat::checkIfIsWeaponized(BaseGladiator &gladiator) {
 }
 
 bool Combat::checkIfIsParalyzed(BaseGladiator &attacker, BaseGladiator &defender) {
+    // cant be 2 gladiator paralyzed at the same time
     string message;
     if(attacker.isWeaponized){
         if(typeid(attacker.weapon).name() == "Paralyze"){
+            defender.weapon.turnCounterReducer();
             message = attacker.getGladiatorName() + " misses this turn, because he is paralyzed";
             CombatLogs.push_back(message);
             cout << message << endl;
             return true;
         }
     }
+
     if(defender.isWeaponized){
         if(typeid(defender.weapon).name() == "Paralyze"){
             int damage = attacker.weapon.makeDamage(attacker.getSP(), defender.isWeaponized);
             defender.decreaseHpBy(damage);
-            message = defender.getGladiatorName() + " is damaged by " + to_string(damage) +  ", because of effect";
+            message = defender.getGladiatorName() + " is damaged by " + to_string(damage) +  ", because of being pralyzed";
             CombatLogs.push_back(message);
             cout << message << endl;
             return true;
@@ -97,13 +113,16 @@ void Combat::turn(BaseGladiator &attacker, BaseGladiator &defender) {
         //hit been successful
         int decreaser = (int)attacker.getSP() * util.getRandomDouble();
         defender.decreaseHpBy(decreaser);
-        message =  attacker.getGladiatorName() + " Hits " + defender.getGladiatorName() + " with " + to_string(decreaser) + " damage.";
+        message = attacker.getGladiatorName() + " Hits " + defender.getGladiatorName() + " with " + to_string(decreaser) + " damage.";
 
         //if(attacker.hasWeaponEffect) attacker.weapon.weaponize(defender);
-        if(attacker.hasWeaponEffect) {
+        if(attacker.hasWeaponEffect){
             int chanceToWeaponize = util.getRandomNumber(100);
             if (chanceToWeaponize <= attacker.weapon.getChanceToOccur()) {
                 defender.isWeaponized = true;
+                if(typeid(attacker.weapon).name() == "Poison"){
+                    attacker.weapon.reduceLifeCounter();
+                }
             }
         }
     }

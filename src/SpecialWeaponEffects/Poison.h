@@ -1,7 +1,3 @@
-//
-// Created by Alex Seres on 04/05/2022.
-//
-
 #ifndef THEGLADIATORPROJECT_POISON_H
 #define THEGLADIATORPROJECT_POISON_H
 
@@ -10,12 +6,16 @@
 
 
 class Poison : public SpecialWeaponEffect {
+
 public:
     Poison(){
         turnCounter = 3;
         decreaser = 5;
         chanceToOccur = 20;
+        lifeCounter = 2;
     }
+    int makeDamage(int hp, bool &isWeaponized) override;
+    int getLifeCounter(){return lifeCounter;}
 };
 
 

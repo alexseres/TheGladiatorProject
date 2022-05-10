@@ -3,6 +3,8 @@
 
 
 #include "Gladiators/BaseGladiator.h"
+#include "SpecialWeaponEffects/SpecialWeaponEffect.h"
+#include "SpecialWeaponEffects/Poison.h"
 #include "Utils.h"
 #include <iostream>
 #include <vector>
