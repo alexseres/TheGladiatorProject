@@ -8,9 +8,14 @@
 
 TEST(CombatTest, simulateCombatTest){
     Combat combat;
+    Utils util;
     int gladiatorsLevel = 4;
-    BaseGladiator gladiator1(Archer, "Archer Maximus", 65, 34, 64, gladiatorsLevel);
-    BaseGladiator gladiator2(Swordsman, "Swordsman Brutus", 35, 54, 86, gladiatorsLevel);
+    bool chanceForWeaponEffect1 = util.getRandomNumber(0,100) < 11 ? true : false;
+    bool chanceForWeaponEffect2 = util.getRandomNumber(0,100) < 11 ? true : false;
+    Bleed bleed(101, chanceForWeaponEffect1);
+    Poison poison(4, chanceForWeaponEffect2);
+    BaseGladiator gladiator1(Archer, "Archer Maximus", 65, 34, 64, gladiatorsLevel, bleed);
+    BaseGladiator gladiator2(Swordsman, "Swordsman Brutus", 35, 54, 86, gladiatorsLevel,poison);
 
     BaseGladiator winner = combat.simulateCombat(gladiator1, gladiator2);
 
@@ -23,8 +28,10 @@ TEST(CombatTest, announceWinnerTest){
     int gladiatorsLevel = 4;
     int gladiatorsHp = 34;
     string message;
-    BaseGladiator gladiator1(Archer, "Archer Maximus", gladiatorsHp, 34, 64, gladiatorsLevel);
-    BaseGladiator gladiator2(Swordsman, "Swordsman Brutus", gladiatorsHp, 54, 86, gladiatorsLevel);
+    Bleed bleed(101, false);
+    Poison poison(4, true);
+    BaseGladiator gladiator1(Archer, "Archer Maximus", 65, 34, 64, gladiatorsLevel, bleed);
+    BaseGladiator gladiator2(Swordsman, "Swordsman Brutus", 35, 54, 86, gladiatorsLevel,poison);
 
     combat.announceWinner(gladiator1, gladiator2, message);
 
@@ -40,8 +47,10 @@ TEST(CombatTest, turnTest){
     string gladiator1Name = "Archer Maximus";
     string expectedMessage = "Archer Maximus turns.";
     string message;
-    BaseGladiator gladiator1(Archer, gladiator1Name, gladiatorsHp, 34, 64, gladiatorsLevel);
-    BaseGladiator gladiator2(Swordsman, "Swordsman Brutus", gladiatorsHp, 54, 86, gladiatorsLevel);
+    Bleed bleed(101, false);
+    Poison poison(4, true);
+    BaseGladiator gladiator1(Archer, "Archer Maximus", 65, 34, 64, gladiatorsLevel, bleed);
+    BaseGladiator gladiator2(Swordsman, "Swordsman Brutus", 35, 54, 86, gladiatorsLevel,poison);
 
     combat.turn(gladiator1,gladiator2);
 

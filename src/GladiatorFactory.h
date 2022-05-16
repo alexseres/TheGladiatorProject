@@ -8,6 +8,12 @@
 #include "Gladiators/Assassin.h"
 #include "Gladiators/Swordsman.h"
 #include "Gladiators/Brutal.h"
+#include "SpecialWeaponEffects/SpecialWeaponEffect.h"
+#include "SpecialWeaponEffects/Poison.h"
+#include "SpecialWeaponEffects/Paralyze.h"
+#include "SpecialWeaponEffects/Bleed.h"
+
+
 
 using namespace std;
 
@@ -24,6 +30,7 @@ public:
     Utils OwnUtils;
     void generateGladiators();
     BaseGladiator *generateGladiator();
+    SpecialWeaponEffect generateWeaponEffect();
 };
 
 

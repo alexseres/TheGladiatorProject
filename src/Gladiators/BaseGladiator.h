@@ -20,11 +20,17 @@ protected:
     StaticticMultiplier sp_multiplier;
     StaticticMultiplier dex_multiplier;
     int StarterHealth = 0;
-    const bool hasWeaponEffect;
 
 public:
     SpecialWeaponEffect weapon;
-    BaseGladiator(GladiatorType type, string name, int hp, int sp, int dex, int level, bool weaponEffect): hasWeaponEffect(weaponEffect){
+    BaseGladiator(GladiatorType type,
+                  string name,
+                  int hp,
+                  int sp,
+                  int dex,
+                  int level,
+                  SpecialWeaponEffect weaponEffect):
+                  weapon(weaponEffect){
         this-> Type = type;
         this-> Name = name;
         this-> HP = hp;
@@ -37,7 +43,6 @@ public:
     string getGladiatorName() {return Name;}
     GladiatorType getGladiatorType(){return Type;}
     int getGladiatorLevel(){return Level;}
-//    void setHP(int val){HP = val;}
     int getHP() {return HP;}
     int getSP()  {return SP;}
     int getDEX() {return DEX;}
@@ -52,10 +57,6 @@ public:
 
     void weaponize(BaseGladiator &enemy);
     bool isWeaponized = false;
-    bool isBleeding = false;
-    bool isPoisoned = false;
-    bool isParalyzed = false;
-    bool isBurning = false;
 
 
 };

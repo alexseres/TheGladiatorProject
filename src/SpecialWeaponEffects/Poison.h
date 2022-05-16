@@ -8,13 +8,12 @@
 class Poison : public SpecialWeaponEffect {
 
 public:
-    Poison(){
-        turnCounter = 3;
+    Poison(int turnCounter, bool chanceToUse) : SpecialWeaponEffect(turnCounter, chanceToUse) {
         decreaser = 5;
         chanceToOccur = 20;
         lifeCounter = 2;
     }
-    int makeDamage(int hp, bool &isWeaponized) override;
+    //int makeDamage(int hp, bool &isWeaponized) override;
     int getLifeCounter(){return lifeCounter;}
 };
 

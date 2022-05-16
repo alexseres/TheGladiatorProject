@@ -11,11 +11,12 @@
 class Bleed : public SpecialWeaponEffect{
 
 public:
-    Bleed(){
-        turnCounter = INTMAX_MAX;
+    Bleed(int turnCounter, bool chanceToUse) : SpecialWeaponEffect(turnCounter, chanceToUse) {
         decreaser = 2;
         chanceToOccur = 5;
     }
+
+    //int makeDamage(int hp, bool &isWeaponized) ;
 };
 
 

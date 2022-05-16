@@ -8,6 +8,8 @@
 #include "Utils.h"
 #include <iostream>
 #include <vector>
+using namespace std;
+
 
 class Combat {
 private:
@@ -18,9 +20,12 @@ public:
     void announceWinner(BaseGladiator &winner,BaseGladiator &looser, string &message);
     BaseGladiator simulateCombat(BaseGladiator gladiator1, BaseGladiator gladiator2);
     void turn(BaseGladiator &attacker, BaseGladiator &defender);
-    void checkIfIsWeaponized(BaseGladiator &gladiator);
+    void checkIfIsWeaponized(BaseGladiator &defender, BaseGladiator &attacker);
     bool checkIfIsParalyzed(BaseGladiator &attacker, BaseGladiator &defender);
+    void isAttacking(BaseGladiator &attacker, BaseGladiator &defender, string &message);
+    void isUsingWeapon(BaseGladiator &attacker, BaseGladiator &defender);
     vector<string> getCombatLogs(){return CombatLogs;}
+
 };
 
 

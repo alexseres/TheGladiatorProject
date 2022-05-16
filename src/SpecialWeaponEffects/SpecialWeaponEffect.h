@@ -12,9 +12,17 @@ protected:
     int lifeCounter;
     Utils util;
     int turnCounter;
+    int turnCounterStarter;
     int decreaser;
     int chanceToOccur;
+
 public:
+    SpecialWeaponEffect(int turnCounterIni, int chanceToUse){
+        turnCounter = turnCounterIni;
+        turnCounterStarter = turnCounterIni;
+        canBeUsed = chanceToUse;
+    }
+    bool canBeUsed;
     virtual int makeDamage(int hp, bool &isWeaponized);
     int getChanceToOccur(){return chanceToOccur;};
 
@@ -22,6 +30,7 @@ public:
     int getLifeCounter(){return lifeCounter;}
     void reduceLifeCounter(){--lifeCounter;}
     void turnCounterReducer(){if(turnCounter > 0)--turnCounter;}
+
 };
 
 

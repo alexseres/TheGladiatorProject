@@ -10,11 +10,11 @@
 
 class Paralyze : public SpecialWeaponEffect {
 public:
-    Paralyze(){
-        turnCounter = 4;
+    Paralyze(int turnCounter, bool chanceToUse) : SpecialWeaponEffect(turnCounter, chanceToUse) {
         chanceToOccur = 10;
     }
-    int makeDamage(int sp, bool &isWeaponized) override;
+
+    int makeDamage(int hp, bool &isWeaponized);
 };
 
 

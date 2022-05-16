@@ -6,7 +6,7 @@
 
 class Brutal : public BaseGladiator{
 public:
-    Brutal(GladiatorType type, string name, int hp, int sp, int dex, int level, bool weaponEffect): BaseGladiator(type, name, hp, sp, dex, level, weaponEffect){
+    Brutal(GladiatorType type, string name, int hp, int sp, int dex, int level, SpecialWeaponEffect weaponEffect): BaseGladiator(type, name, hp, sp, dex, level, weaponEffect){
         Type = type;
         hp_multiplier = High;
         sp_multiplier = High;
