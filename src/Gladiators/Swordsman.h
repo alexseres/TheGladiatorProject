@@ -10,7 +10,7 @@
 
 class Swordsman : public BaseGladiator{
 public:
-    Swordsman(GladiatorType type, string name, double hp, double sp, double dex, int level, SpecialWeaponEffect weaponEffect): BaseGladiator(type, name, hp, sp, dex, level, weaponEffect){
+    Swordsman(GladiatorType type, string name, double hp, double sp, double dex, int level): BaseGladiator(type, name, hp, sp, dex, level){
         Type = type;
         hp_multiplier = High;
         sp_multiplier = Medium;

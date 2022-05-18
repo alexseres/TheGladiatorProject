@@ -10,13 +10,13 @@ int expectedMinimumLevel = 5;
 
 TEST(TournamentTest, fillGladiatorTest){
     Tournament tournament;
-    tournament.fillGladiatorsVector();
+    tournament.fillGladiatorsVectorAndAddWeapon();
     EXPECT_EQ(tournament.getGladiators().size() , expectedGladiatorSize);
 }
 
 TEST(TournamentTest, simulateTest){
     Tournament tournament;
-    tournament.fillGladiatorsVector();
+    tournament.fillGladiatorsVectorAndAddWeapon();
     tournament.simulateTournament();
     EXPECT_EQ(expectedFights, tournament.getFightCounter());
 }
@@ -24,7 +24,7 @@ TEST(TournamentTest, simulateTest){
 TEST(TournamentTest, knockOutTest){
     Combat combat;
     Tournament tournament;
-    tournament.fillGladiatorsVector();
+    tournament.fillGladiatorsVectorAndAddWeapon();
     BaseGladiator champion = tournament.knockOut(tournament.getGladiators(), combat);
     EXPECT_TRUE(expectedMinimumLevel< champion.getGladiatorLevel());
     EXPECT_TRUE(!champion.isDead);
@@ -32,7 +32,7 @@ TEST(TournamentTest, knockOutTest){
 
 TEST(TournamentTest, sliceVectorTest){
     Tournament tournament;
-    tournament.fillGladiatorsVector();
+    tournament.fillGladiatorsVectorAndAddWeapon();
     int expectedResult = tournament.getGladiators().size() / 2;
     vector<BaseGladiator> result = tournament.sliceVector(tournament.getGladiators(), 0, tournament.getGladiators().size() / 2);
     EXPECT_EQ(result.size(), expectedResult);

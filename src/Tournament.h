@@ -27,7 +27,7 @@ private:
 
 
 public:
-    void fillGladiatorsVector();
+    void fillGladiatorsVectorAndAddWeapon();
     void simulateTournament();
     BaseGladiator knockOut(vector<BaseGladiator> gladiators, Combat combat);
     vector<BaseGladiator> sliceVector(vector<BaseGladiator> const &v, int m, int n);

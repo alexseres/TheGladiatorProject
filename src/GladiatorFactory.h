@@ -30,7 +30,7 @@ public:
     Utils OwnUtils;
     void generateGladiators();
     BaseGladiator *generateGladiator();
-    SpecialWeaponEffect generateWeaponEffect();
+    void generateWeaponEffect(BaseGladiator &gladiator);
 };
 
 

@@ -10,11 +10,18 @@
 
 class Paralyze : public SpecialWeaponEffect {
 public:
+    int makeDamage(int hp, bool &isWeaponized) override {
+        if(turnCounter > 0) {
+            return (int) hp * util.getRandomDouble();
+        }
+        else{
+            isWeaponized = false;
+            return 0;
+        }
+    }
     Paralyze(int turnCounter, bool chanceToUse) : SpecialWeaponEffect(turnCounter, chanceToUse) {
         chanceToOccur = 10;
     }
-
-    int makeDamage(int hp, bool &isWeaponized);
 };
 
 

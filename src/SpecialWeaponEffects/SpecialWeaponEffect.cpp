@@ -3,7 +3,7 @@
 //
 
 #include "SpecialWeaponEffect.h"
-//
+
 //int SpecialWeaponEffect::makeDamage(int hp, bool &isWeaponized) {
 //    if(turnCounter > 0){
 //        --turnCounter;

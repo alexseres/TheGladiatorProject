@@ -117,9 +117,9 @@ void Combat::turn(BaseGladiator &attacker, BaseGladiator &defender) {
 }
 
 void Combat::isUsingWeapon(BaseGladiator &attacker, BaseGladiator &defender) {
-    if(attacker.weapon.canBeUsed){
+    if(attacker.weapon->canBeUsed){
         int chanceToWeaponize = util.getRandomNumber(100);
-        if (chanceToWeaponize <= attacker.weapon.getChanceToOccur()) {
+        if (chanceToWeaponize <= attacker.weapon->getChanceToOccur()) {
             defender.isWeaponized = true;
 //            if(typeid(attacker.weapon).name() == "Poison"){
 //                attacker.weapon.reduceLifeCounter();
@@ -148,6 +148,7 @@ void Combat::isAttacking(BaseGladiator &attacker, BaseGladiator &defender, strin
 
 
 void Combat::announceWinner(BaseGladiator &winner, BaseGladiator &looser, string &message) {
+    delete looser.weapon;
     winner.increaseAbilities();
     winner.healUp();
     message = winner.getGladiatorName() + " has won. " + looser.getGladiatorName() + " is dead.";

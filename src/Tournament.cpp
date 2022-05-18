@@ -1,10 +1,11 @@
 #include "Tournament.h"
 
 
-void Tournament::fillGladiatorsVector() {
+void Tournament::fillGladiatorsVectorAndAddWeapon() {
     gladiatorFactory.generateGladiators();
     for(BaseGladiator *baseGladiator : gladiatorFactory.GladiatorArr){
         BaseGladiator gladiator = *baseGladiator;
+        gladiatorFactory.generateWeaponEffect(gladiator);
         Gladiators.push_back(gladiator);
         delete baseGladiator;
     }

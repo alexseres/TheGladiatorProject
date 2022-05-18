@@ -4,6 +4,7 @@
 #include "StatisticMultiplier.cpp"
 #include "GladiatorType.cpp"
 #include "SpecialWeaponEffects/SpecialWeaponEffect.cpp"
+#include "SpecialWeaponEffects/Paralyze.h"
 
 
 using namespace std;
@@ -22,15 +23,13 @@ protected:
     int StarterHealth = 0;
 
 public:
-    SpecialWeaponEffect weapon;
+
     BaseGladiator(GladiatorType type,
                   string name,
                   int hp,
                   int sp,
                   int dex,
-                  int level,
-                  SpecialWeaponEffect weaponEffect):
-                  weapon(weaponEffect){
+                  int level){
         this-> Type = type;
         this-> Name = name;
         this-> HP = hp;
@@ -39,6 +38,7 @@ public:
         this-> Level = level;
         StarterHealth = HP;
     };
+    SpecialWeaponEffect *weapon;
 
     string getGladiatorName() {return Name;}
     GladiatorType getGladiatorType(){return Type;}
