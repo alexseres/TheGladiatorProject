@@ -5,6 +5,7 @@
 #include "Gladiators/BaseGladiator.h"
 #include "SpecialWeaponEffects/SpecialWeaponEffect.h"
 #include "SpecialWeaponEffects/Poison.h"
+#include "SpecialWeaponEffects/Paralyze.h.h"
 #include "Utils.h"
 #include <iostream>
 #include <vector>
@@ -15,6 +16,9 @@ class Combat {
 private:
     vector<string> CombatLogs;
     Utils util;
+    //with these we can do runtime type comparison
+    const type_info &typePoison = typeid(Poison);
+    const type_info &typeParalyze = typeid(Paralyze);
 
 public:
     void announceWinner(BaseGladiator &winner,BaseGladiator &looser, string &message);

@@ -37,4 +37,5 @@ TEST(GladiatorFactoryTest, generateGladiatorsTest){
         EXPECT_TRUE(gladiator->getDEX() > 0 );
         EXPECT_TRUE(gladiator->getGladiatorLevel() > 0 );
     }
+    cout << "passed" << endl;
 }

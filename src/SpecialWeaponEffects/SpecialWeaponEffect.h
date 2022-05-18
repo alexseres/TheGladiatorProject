@@ -30,7 +30,6 @@ public:
     int getLifeCounter(){return lifeCounter;}
     void reduceLifeCounter(){--lifeCounter;}
     void turnCounterReducer(){if(turnCounter > 0)--turnCounter;}
-    //virtual ~SpecialWeaponEffect()= default;
 
 };
 

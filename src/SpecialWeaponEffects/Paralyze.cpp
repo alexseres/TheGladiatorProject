@@ -1,12 +1,8 @@
-//
-// Created by Alex Seres on 04/05/2022.
-//
-
 #include "Paralyze.h"
 
-//int Paralyze::makeDamage(int sp, bool &isWeaponized) {
+//int Paralyze::makeDamage(int hp, bool &isWeaponized) {
 //    if(turnCounter > 0) {
-//        return (int) sp * util.getRandomDouble();
+//        return (int) hp * util.getRandomDouble();
 //    }
 //    else{
 //        isWeaponized = false;

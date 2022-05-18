@@ -7,7 +7,7 @@ void GladiatorFactory::generateGladiators() {
     srand(time(NULL));
     for(int i = 0;i < GladiatorVectorSize;i++){
         BaseGladiator *gladiator = generateGladiator();
-//        generateWeaponEffect(*gladiator);
+        generateWeaponEffect(*gladiator);
         GladiatorArr[i] = gladiator;
     }
 }
@@ -16,25 +16,22 @@ void GladiatorFactory::generateGladiators() {
 void GladiatorFactory::generateWeaponEffect(BaseGladiator &gladiator) {
     bool chanceForWeaponEffect = OwnUtils.getRandomNumber(0,100) < 11 ? true : false;
     int randomNum = OwnUtils.getRandomNumber(0,100);
-    int turnCounter;
-    turnCounter= 0;
-    Paralyze *para = new Paralyze(turnCounter, chanceForWeaponEffect);
-    gladiator.weapon = para;
-//    if(randomNum <= 33){
-//        turnCounter = 4;
-//        Paralyze para(turnCounter, chanceForWeaponEffect);
-//        gladiator.weapon = &para;
-//    }
-//    else if(randomNum >=67){
-//        turnCounter = 101;
-//        Bleed bleed(turnCounter, chanceForWeaponEffect);
-//        gladiator.weapon = &bleed;
-//    }
-//    else{
-//        turnCounter = 3;
-//        Poison poison(turnCounter, chanceForWeaponEffect);
-//        gladiator.weapon = &poison;
-//    }
+    int turnCounter = 0;
+    if(randomNum <= 33){
+        turnCounter = 4;
+        auto *para = new Paralyze(turnCounter, chanceForWeaponEffect);
+        gladiator.weapon = para;
+    }
+    else if(randomNum >=67) {
+        turnCounter = 101;
+        auto *bleed = new Bleed(turnCounter, chanceForWeaponEffect);
+        gladiator.weapon = bleed;
+    }
+    else{
+        turnCounter = 3;
+        auto *poison = new Poison(turnCounter, chanceForWeaponEffect);
+        gladiator.weapon = poison;
+    }
 
 }
 

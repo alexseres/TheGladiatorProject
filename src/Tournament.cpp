@@ -5,7 +5,6 @@ void Tournament::fillGladiatorsVectorAndAddWeapon() {
     gladiatorFactory.generateGladiators();
     for(BaseGladiator *baseGladiator : gladiatorFactory.GladiatorArr){
         BaseGladiator gladiator = *baseGladiator;
-        gladiatorFactory.generateWeaponEffect(gladiator);
         Gladiators.push_back(gladiator);
         delete baseGladiator;
     }
@@ -38,6 +37,7 @@ void Tournament::simulateTournament() {
     Combat combat;
     BaseGladiator champion = knockOut(Gladiators, combat);
     Champion = &champion;
+
     cout << "Champion is " + Champion->getGladiatorName() + ".";
 }
 
