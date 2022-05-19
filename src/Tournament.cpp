@@ -38,7 +38,7 @@ void Tournament::simulateTournament() {
     BaseGladiator champion = knockOut(Gladiators, combat);
     Champion = &champion;
 
-    cout << "Champion is " + Champion->getGladiatorName() + ".";
+    cout << "Champion is " + Champion->getGladiatorName() + "." << endl;
 }
 
 

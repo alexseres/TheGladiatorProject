@@ -9,7 +9,7 @@ void BaseGladiator::increaseAbilities() {
 
 void BaseGladiator::healUp() {
     HP = StarterHealth;
-    HP = HP * (int)(hp_multiplier * 0.01) * Level;
+    HP = (int)(HP * (hp_multiplier * 0.01) * Level);
     StarterHealth = HP;
 }
 

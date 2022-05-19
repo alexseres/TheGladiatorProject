@@ -8,16 +8,18 @@
 class Poison : public SpecialWeaponEffect {
 
 public:
+    int lifeCounterStarter = 0;
+    int getLifeCounter(){return lifeCounter;}
     Poison(int turnCounter, bool chanceToUse) : SpecialWeaponEffect(turnCounter, chanceToUse) {
         decreaser = 5;
         chanceToOccur = 20;
         lifeCounter = 2;
+        lifeCounterStarter = lifeCounter;
     }
-    int getLifeCounter(){return lifeCounter;}
     int makeDamage(int hp, bool &isWeaponized) override{
         if(lifeCounter > 0){
+            --turnCounter;
             if(turnCounter > 0){
-                --turnCounter;
                 return (int)hp * (decreaser * 0.01);
             }
             else{
@@ -26,12 +28,12 @@ public:
                 return 0;
             }
         }
-        else{
-            turnCounter = turnCounterStarter;
-            isWeaponized = false;
-            return -1;
-        }
-    };
+    }
+
+    void resetFields() override {
+        turnCounter = turnCounterStarter;
+        lifeCounter = lifeCounterStarter;
+    }
 };
 
 

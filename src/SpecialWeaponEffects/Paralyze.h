@@ -21,9 +21,13 @@ public:
         }
         else{
             isWeaponized = false;
+            turnCounter = turnCounterStarter;
             return 0;
         }
     };
+    void resetFields() override{
+        turnCounter = turnCounterStarter;
+    }
 };
 
 

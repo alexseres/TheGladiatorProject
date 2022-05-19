@@ -14,7 +14,14 @@ BaseGladiator Combat::simulateCombat(BaseGladiator gladiator1, BaseGladiator gla
     //so it is restricted to 100 turn each
     int turnCounter = 0;
 
-    while(gladiator1.getHP() > 0 && gladiator2.getHP() > 0 && turnCounter < 101){
+//    while(gladiator1.getHP() > 0 && gladiator2.getHP() > 0 && turnCounter < 101){
+//        firstStarts ? turn(gladiator1, gladiator2) : turn(gladiator2, gladiator1);
+//        if(firstStarts) firstStarts = false;
+//        else firstStarts = true;
+//        ++turnCounter;
+//    }
+
+    while(!(gladiator1.isDead) &&!(gladiator2.isDead) && turnCounter < 101){
         firstStarts ? turn(gladiator1, gladiator2) : turn(gladiator2, gladiator1);
         if(firstStarts) firstStarts = false;
         else firstStarts = true;
@@ -33,76 +40,74 @@ BaseGladiator Combat::simulateCombat(BaseGladiator gladiator1, BaseGladiator gla
 
     if(gladiator2.isDead){
         announceWinner(gladiator1, gladiator2, message);
+        if(gladiator1.weapon->canBeUsed)gladiator1.weapon->resetFields();
         return gladiator1;
     }
     else{
         announceWinner(gladiator2, gladiator1, message);
+        if(gladiator2.weapon->canBeUsed)gladiator2.weapon->resetFields();
         return gladiator2;
     }
 }
 
 void Combat::turn(BaseGladiator &attacker, BaseGladiator &defender) {
-    checkIfIsWeaponized(defender, attacker);
-    checkIfIsWeaponized(attacker, defender);
-    bool skipRest = checkIfIsParalyzed(attacker, defender);
-    if(attacker.isDead || defender.isDead) return;
-    if(skipRest) return;
-
     string message;
     message = attacker.getGladiatorName() + " turns.";
     CombatLogs.push_back(message);
     cout << message << endl;
 
-    isAttacking(attacker, defender, message);
+    checkIfIsWeaponized(defender, attacker);
+    if(defender.isDead) return;
 
-    CombatLogs.push_back(message);
-    cout << message << endl;
+    checkIfIsWeaponized(attacker, defender);
+    if(attacker.isDead) return;
+
+    bool skipRest = checkIfIsParalyzed(attacker, defender);
+    if(attacker.isDead || defender.isDead) return;
+    if(skipRest) return;
+
+    isAttacking(attacker, defender);
 }
 
 void Combat::checkIfIsWeaponized(BaseGladiator &defender, BaseGladiator &attacker) {
     if(defender.isWeaponized){
-        const type_info &typeActualAttackerWeapon = typeid(*attacker.weapon);
+//        const type_info &typeActualAttackerWeapon = typeid(*attacker.weapon);
+        string typeActualAttackerWeapon = typeid(*attacker.weapon).name();
         if(typeParalyze == typeActualAttackerWeapon){
             return;
         }
         else{
             string message;
             int damage = 0;
+            damage = attacker.weapon->makeDamage(defender.getHP(), defender.isWeaponized);
             if(typePoison == typeActualAttackerWeapon){
-                damage = attacker.weapon->makeDamage(defender.getHP(), defender.isWeaponized);
-                if(damage == -1){
-                    //-1 only returns in Poison class and happens when 2 times poisoned
-                    message = defender.getGladiatorName() + " is poisoned for the second time, he is gonna die";
-                    CombatLogs.push_back(message);
-                    cout << message << endl;
-                    defender.isDead = true;
-                    return;
-                }
-                else{
-                    damage = attacker.weapon->makeDamage(defender.getHP(), defender.isWeaponized);
-                    message = defender.getGladiatorName() + " is poisoned for " + to_string(attacker.weapon->getTurnCounter()) + " turn, and he is damaged by " +
+                message = defender.getGladiatorName() + " is poisoned for " + to_string(attacker.weapon->getTurnCounter()) + " turn, and he is damaged by " +
                             to_string(damage);
-                }
             }
             else{
-                damage = attacker.weapon->makeDamage(defender.getHP(), defender.isWeaponized);
                 message = defender.getGladiatorName() + " is bleeding for the rest of the combat"  + " turn, and he is damaged by " +
                           to_string(damage);
             }
+
+            if(damage <= 0) return;
+
             defender.decreaseHpBy(damage);
             CombatLogs.push_back(message);
             cout << message << endl;
+
+            message = "Actual HP statistics: " + attacker.getGladiatorName() + " =" + to_string(attacker.getHP()) + " HP, "
+                      + defender.getGladiatorName() + " =" + to_string(defender.getHP()) + " HP.";
+            cout << message << endl;
+            CombatLogs.push_back(message);
         }
     }
 }
 
 bool Combat::checkIfIsParalyzed(BaseGladiator &attacker, BaseGladiator &defender) {
     // cant be 2 gladiator paralyzed at the same time
-
     string message;
-
     if(attacker.isWeaponized){
-        const type_info &typeActualDefenderWeapon = typeid(*defender.weapon);
+        string typeActualDefenderWeapon = typeid(*defender.weapon).name();
         if(typeParalyze == typeActualDefenderWeapon){
             defender.weapon->turnCounterReducer();
             message = attacker.getGladiatorName() + " misses this turn, because he is paralyzed";
@@ -113,7 +118,7 @@ bool Combat::checkIfIsParalyzed(BaseGladiator &attacker, BaseGladiator &defender
     }
 
     if(defender.isWeaponized){
-        const type_info &typeActualAttackerWeapon = typeid(*attacker.weapon);
+        string typeActualAttackerWeapon = typeid(*attacker.weapon).name();
         if(typeParalyze == typeActualAttackerWeapon){
             int damage = attacker.weapon->makeDamage(attacker.getSP(), defender.isWeaponized);
             if(damage > 0){
@@ -122,6 +127,10 @@ bool Combat::checkIfIsParalyzed(BaseGladiator &attacker, BaseGladiator &defender
                 attacker.weapon->turnCounterReducer();
                 CombatLogs.push_back(message);
                 cout << message << endl;
+                message = "Actual HP statistics: " + attacker.getGladiatorName() + " =" + to_string(attacker.getHP()) + " HP, "
+                          + defender.getGladiatorName() + " =" + to_string(defender.getHP()) + " HP.";
+                cout << message << endl;
+                CombatLogs.push_back(message);
             }
             return true;
         }
@@ -129,37 +138,62 @@ bool Combat::checkIfIsParalyzed(BaseGladiator &attacker, BaseGladiator &defender
     return false;
 }
 
-
 void Combat::isUsingWeapon(BaseGladiator &attacker, BaseGladiator &defender) {
+    //check if the gladiator can use its weapon
     if(attacker.weapon->canBeUsed){
         int chanceToWeaponize = util.getRandomNumber(100);
-        if (chanceToWeaponize <= attacker.weapon->getChanceToOccur()) {
+        // check if he got luck to use weapon
+        if(chanceToWeaponize <= attacker.weapon->getChanceToOccur()) {
             defender.isWeaponized = true;
-            const type_info &typeActualAttackerWeapon = typeid(*attacker.weapon);
+            string message = defender.getGladiatorName() + " has been effected ";
+            cout << message << endl;
+            CombatLogs.push_back(message);
+
+            string typeActualAttackerWeapon = typeid(*attacker.weapon).name();
+
+            //basically checks if the defender poisoned for the second time, it is, he is gonna die
             if(typePoison == typeActualAttackerWeapon){
                 attacker.weapon->reduceLifeCounter();
+                if(attacker.weapon->getLifeCounter() == 0){
+                    message = defender.getGladiatorName() + " is poisoned for the second time, he is gonna die";
+                    CombatLogs.push_back(message);
+                    cout << message << endl;
+                    defender.isDead = true;
+                    return;
+                }
             }
         }
     }
 }
 
-void Combat::isAttacking(BaseGladiator &attacker, BaseGladiator &defender, string &message) {
+void Combat::isAttacking(BaseGladiator &attacker, BaseGladiator &defender) {
     int difference = attacker.getDEX() - defender.getDEX();
     int chance = util.getClampValue(difference);
     int percentage = util.getRandomNumber(100);
+    string message= "";
     if(chance > percentage){
         //hit been successful
         int decreaser = (int)attacker.getSP() * util.getRandomDouble();
         defender.decreaseHpBy(decreaser);
         message = attacker.getGladiatorName() + " Hits " + defender.getGladiatorName() + " with " + to_string(decreaser) + " damage.";
-        isUsingWeapon(attacker, defender);
+        cout << message << endl;
+        CombatLogs.push_back(message);
+
+        message = "Actual HP statistics: " + attacker.getGladiatorName() + " =" + to_string(attacker.getHP()) + " HP, "
+                + defender.getGladiatorName() + " =" + to_string(defender.getHP()) + " HP.";
+        cout << message << endl;
+        CombatLogs.push_back(message);
+
+        if(defender.isDead) return;
+        if(!(defender.isWeaponized))isUsingWeapon(attacker, defender);
     }
     else{
         //missed
         message = attacker.getGladiatorName() + " Misses.";
+        cout << message << endl;
+        CombatLogs.push_back(message);
     }
 }
-
 
 void Combat::announceWinner(BaseGladiator &winner, BaseGladiator &looser, string &message) {
     winner.increaseAbilities();

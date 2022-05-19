@@ -14,7 +14,7 @@ void GladiatorFactory::generateGladiators() {
 
 
 void GladiatorFactory::generateWeaponEffect(BaseGladiator &gladiator) {
-    bool chanceForWeaponEffect = OwnUtils.getRandomNumber(0,100) < 11 ? true : false;
+    bool chanceForWeaponEffect = OwnUtils.getRandomNumber(0, 100) < 91;
     int randomNum = OwnUtils.getRandomNumber(0,100);
     int turnCounter = 0;
     if(randomNum <= 33){

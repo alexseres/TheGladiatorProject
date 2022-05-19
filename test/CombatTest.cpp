@@ -12,13 +12,12 @@ TEST(CombatTest, simulateCombatTest){
     int gladiatorsLevel = 4;
     bool chanceForWeaponEffect1 = util.getRandomNumber(0,100) < 11 ? true : false;
     bool chanceForWeaponEffect2 = util.getRandomNumber(0,100) < 11 ? true : false;
-//    Bleed bleed(101, chanceForWeaponEffect1);
-//    Poison poison(4, chanceForWeaponEffect2);
-//    Paralyze para(4, chanceForWeaponEffect1);
     Paralyze para(4, true);
-    BaseGladiator gladiator1(Archer, "Archer Maximus", 65, 34, 64, gladiatorsLevel);
-    BaseGladiator gladiator2(Swordsman, "Swordsman Brutus", 35, 54, 86, gladiatorsLevel);
+    Bleed bleed(102,true);
+    BaseGladiator gladiator1(Archer, "Archer Maximuss", 65, 34, 64, gladiatorsLevel);
+    BaseGladiator gladiator2(Swordsman, "Swordsman Brutuss", 35, 54, 86, gladiatorsLevel);
     gladiator1.weapon =  &para;
+    gladiator2.weapon = &bleed;
 
     BaseGladiator winner = combat.simulateCombat(gladiator1, gladiator2);
 

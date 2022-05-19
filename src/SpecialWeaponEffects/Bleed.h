@@ -17,15 +17,20 @@ public:
     }
 
     int makeDamage(int hp, bool &isWeaponized) override{
+
         if(turnCounter > 0){
             --turnCounter;
-            return (int)hp * (decreaser * 0.01);
+            return (int)hp * (decreaser * 0.1);
         }
         else{
             turnCounter = turnCounterStarter;
             isWeaponized = false;
             return 0;
         }
+    }
+
+    void resetFields() override{
+        turnCounter = turnCounterStarter;
     }
 };
 

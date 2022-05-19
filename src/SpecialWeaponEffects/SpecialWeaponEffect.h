@@ -23,9 +23,10 @@ public:
         turnCounterStarter = turnCounterIni;
         canBeUsed = chanceToUse;
     }
-    virtual int makeDamage(int hp, bool &isWeaponized) = 0;
-    int getChanceToOccur(){return chanceToOccur;};
+    virtual int makeDamage(int enemyHp, bool &enemyIsWeaponized) = 0;
+    virtual void resetFields() = 0;
 
+    int getChanceToOccur(){return chanceToOccur;};
     int getTurnCounter() {return turnCounter;}
     int getLifeCounter(){return lifeCounter;}
     void reduceLifeCounter(){--lifeCounter;}
