@@ -30,7 +30,8 @@ add_test(NAME BaseGladiatorTest COMMAND test1)
 add_test(NAME util_t COMMAND randomNumberTest)
 add_test(NAME GladiatorFactoryTest COMMAND generateGladiatorTest generateGladiatorsTest)
 add_test(NAME TournamentTest COMMAND fillGladiatorsTest simulateTest sliceVectorTest knockOutTes)
-add_test(NAME CombatTest COMMAND simulateCombatTest turnTest announceWinnerTest)
+add_test(NAME CombatTest COMMAND simulateCombatTest turnTest announceWinnerTest checkIfIsWeaponizedTest checkIfIsParalyzedTest isUsingWeaponTest)
+
 
 #include(GoogleTest)
 #gtest_discover_tests(

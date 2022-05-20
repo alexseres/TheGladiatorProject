@@ -21,6 +21,7 @@ protected:
     StaticticMultiplier sp_multiplier;
     StaticticMultiplier dex_multiplier;
     int StarterHealth = 0;
+    int matchWon = 0;
 
 public:
 
@@ -50,6 +51,8 @@ public:
     StaticticMultiplier getSpMultiplier() {return sp_multiplier;}
     StaticticMultiplier getDexMultiplier()  {return dex_multiplier;}
     int getStarterHealth()  {return StarterHealth;}
+    void setMatchWon(){++matchWon;}
+    int getMatchWon(){return matchWon;}
     void increaseAbilities();
     void decreaseHpBy(int decreaser);
     void healUp();

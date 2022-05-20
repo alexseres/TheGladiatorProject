@@ -12,6 +12,6 @@ add_test([=[GladiatorFactoryTest]=] "generateGladiatorTest" "generateGladiatorsT
 set_tests_properties([=[GladiatorFactoryTest]=] PROPERTIES  _BACKTRACE_TRIPLES "/Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/test/CMakeLists.txt;31;add_test;/Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/test/CMakeLists.txt;0;")
 add_test([=[TournamentTest]=] "fillGladiatorsTest" "simulateTest" "sliceVectorTest" "knockOutTes")
 set_tests_properties([=[TournamentTest]=] PROPERTIES  _BACKTRACE_TRIPLES "/Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/test/CMakeLists.txt;32;add_test;/Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/test/CMakeLists.txt;0;")
-add_test([=[CombatTest]=] "simulateCombatTest" "turnTest" "announceWinnerTest")
+add_test([=[CombatTest]=] "simulateCombatTest" "turnTest" "announceWinnerTest" "checkIfIsWeaponizedTest" "checkIfIsParalyzedTest" "isUsingWeaponTest")
 set_tests_properties([=[CombatTest]=] PROPERTIES  _BACKTRACE_TRIPLES "/Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/test/CMakeLists.txt;33;add_test;/Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/test/CMakeLists.txt;0;")
 subdirs("../_deps/googletest-build")

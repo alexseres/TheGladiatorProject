@@ -20,7 +20,13 @@ public:
 
         if(turnCounter > 0){
             --turnCounter;
-            return (int)hp * (decreaser * 0.1);
+            int damage = (int)hp * (decreaser * 0.1);
+            if(damage != 0){
+                return damage;
+            }
+            else{
+                return 1;
+            }
         }
         else{
             turnCounter = turnCounterStarter;

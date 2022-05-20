@@ -14,7 +14,6 @@ using namespace std;
 
 class Combat {
 private:
-    vector<string> CombatLogs;
     Utils util;
     //with these we can do runtime type comparison
 //    const type_info &typePoison = typeid(Poison);
@@ -23,14 +22,13 @@ private:
     const string typePoison = typeid(Poison).name();
 
 public:
-    void announceWinner(BaseGladiator &winner,BaseGladiator &looser, string &message);
+    void announceWinner(BaseGladiator &winner,BaseGladiator &looser);
     BaseGladiator simulateCombat(BaseGladiator gladiator1, BaseGladiator gladiator2);
     void turn(BaseGladiator &attacker, BaseGladiator &defender);
     void checkIfIsWeaponized(BaseGladiator &defender, BaseGladiator &attacker);
     bool checkIfIsParalyzed(BaseGladiator &attacker, BaseGladiator &defender);
     void isAttacking(BaseGladiator &attacker, BaseGladiator &defender);
-    void isUsingWeapon(BaseGladiator &attacker, BaseGladiator &defender);
-    vector<string> getCombatLogs(){return CombatLogs;}
+    bool isUsingWeapon(BaseGladiator &attacker, BaseGladiator &defender);
 
 };
 
