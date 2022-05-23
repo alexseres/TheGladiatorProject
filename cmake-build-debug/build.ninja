@@ -176,6 +176,136 @@ build src/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
 build src/edit_cache: phony src/CMakeFiles/edit_cache.util
 
 # =============================================================================
+# Object build statements for EXECUTABLE target TheGladiatorProject
+
+
+#############################################
+# Order-only phony target for TheGladiatorProject
+
+build cmake_object_order_depends_target_TheGladiatorProject: phony || src/CMakeFiles/TheGladiatorProject.dir
+
+build src/CMakeFiles/TheGladiatorProject.dir/main.cpp.o: CXX_COMPILER__TheGladiatorProject_Debug /Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/src/main.cpp || cmake_object_order_depends_target_TheGladiatorProject
+  DEP_FILE = src/CMakeFiles/TheGladiatorProject.dir/main.cpp.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -mmacosx-version-min=10.15 -std=gnu++14
+  INCLUDES = -I/Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/src -I/Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/src/Gladiators -I/Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/src/SpecialWeaponEffects
+  OBJECT_DIR = src/CMakeFiles/TheGladiatorProject.dir
+  OBJECT_FILE_DIR = src/CMakeFiles/TheGladiatorProject.dir
+
+build src/CMakeFiles/TheGladiatorProject.dir/Gladiators/StatisticMultiplier.cpp.o: CXX_COMPILER__TheGladiatorProject_Debug /Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/src/Gladiators/StatisticMultiplier.cpp || cmake_object_order_depends_target_TheGladiatorProject
+  DEP_FILE = src/CMakeFiles/TheGladiatorProject.dir/Gladiators/StatisticMultiplier.cpp.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -mmacosx-version-min=10.15 -std=gnu++14
+  INCLUDES = -I/Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/src -I/Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/src/Gladiators -I/Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/src/SpecialWeaponEffects
+  OBJECT_DIR = src/CMakeFiles/TheGladiatorProject.dir
+  OBJECT_FILE_DIR = src/CMakeFiles/TheGladiatorProject.dir/Gladiators
+
+build src/CMakeFiles/TheGladiatorProject.dir/Combat.cpp.o: CXX_COMPILER__TheGladiatorProject_Debug /Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/src/Combat.cpp || cmake_object_order_depends_target_TheGladiatorProject
+  DEP_FILE = src/CMakeFiles/TheGladiatorProject.dir/Combat.cpp.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -mmacosx-version-min=10.15 -std=gnu++14
+  INCLUDES = -I/Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/src -I/Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/src/Gladiators -I/Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/src/SpecialWeaponEffects
+  OBJECT_DIR = src/CMakeFiles/TheGladiatorProject.dir
+  OBJECT_FILE_DIR = src/CMakeFiles/TheGladiatorProject.dir
+
+build src/CMakeFiles/TheGladiatorProject.dir/GladiatorFactory.cpp.o: CXX_COMPILER__TheGladiatorProject_Debug /Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/src/GladiatorFactory.cpp || cmake_object_order_depends_target_TheGladiatorProject
+  DEP_FILE = src/CMakeFiles/TheGladiatorProject.dir/GladiatorFactory.cpp.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -mmacosx-version-min=10.15 -std=gnu++14
+  INCLUDES = -I/Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/src -I/Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/src/Gladiators -I/Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/src/SpecialWeaponEffects
+  OBJECT_DIR = src/CMakeFiles/TheGladiatorProject.dir
+  OBJECT_FILE_DIR = src/CMakeFiles/TheGladiatorProject.dir
+
+build src/CMakeFiles/TheGladiatorProject.dir/Gladiators/Archer.cpp.o: CXX_COMPILER__TheGladiatorProject_Debug /Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/src/Gladiators/Archer.cpp || cmake_object_order_depends_target_TheGladiatorProject
+  DEP_FILE = src/CMakeFiles/TheGladiatorProject.dir/Gladiators/Archer.cpp.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -mmacosx-version-min=10.15 -std=gnu++14
+  INCLUDES = -I/Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/src -I/Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/src/Gladiators -I/Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/src/SpecialWeaponEffects
+  OBJECT_DIR = src/CMakeFiles/TheGladiatorProject.dir
+  OBJECT_FILE_DIR = src/CMakeFiles/TheGladiatorProject.dir/Gladiators
+
+build src/CMakeFiles/TheGladiatorProject.dir/Gladiators/Assassin.cpp.o: CXX_COMPILER__TheGladiatorProject_Debug /Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/src/Gladiators/Assassin.cpp || cmake_object_order_depends_target_TheGladiatorProject
+  DEP_FILE = src/CMakeFiles/TheGladiatorProject.dir/Gladiators/Assassin.cpp.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -mmacosx-version-min=10.15 -std=gnu++14
+  INCLUDES = -I/Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/src -I/Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/src/Gladiators -I/Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/src/SpecialWeaponEffects
+  OBJECT_DIR = src/CMakeFiles/TheGladiatorProject.dir
+  OBJECT_FILE_DIR = src/CMakeFiles/TheGladiatorProject.dir/Gladiators
+
+build src/CMakeFiles/TheGladiatorProject.dir/Gladiators/BaseGladiator.cpp.o: CXX_COMPILER__TheGladiatorProject_Debug /Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/src/Gladiators/BaseGladiator.cpp || cmake_object_order_depends_target_TheGladiatorProject
+  DEP_FILE = src/CMakeFiles/TheGladiatorProject.dir/Gladiators/BaseGladiator.cpp.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -mmacosx-version-min=10.15 -std=gnu++14
+  INCLUDES = -I/Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/src -I/Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/src/Gladiators -I/Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/src/SpecialWeaponEffects
+  OBJECT_DIR = src/CMakeFiles/TheGladiatorProject.dir
+  OBJECT_FILE_DIR = src/CMakeFiles/TheGladiatorProject.dir/Gladiators
+
+build src/CMakeFiles/TheGladiatorProject.dir/Gladiators/Brutal.cpp.o: CXX_COMPILER__TheGladiatorProject_Debug /Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/src/Gladiators/Brutal.cpp || cmake_object_order_depends_target_TheGladiatorProject
+  DEP_FILE = src/CMakeFiles/TheGladiatorProject.dir/Gladiators/Brutal.cpp.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -mmacosx-version-min=10.15 -std=gnu++14
+  INCLUDES = -I/Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/src -I/Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/src/Gladiators -I/Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/src/SpecialWeaponEffects
+  OBJECT_DIR = src/CMakeFiles/TheGladiatorProject.dir
+  OBJECT_FILE_DIR = src/CMakeFiles/TheGladiatorProject.dir/Gladiators
+
+build src/CMakeFiles/TheGladiatorProject.dir/Gladiators/Swordsman.cpp.o: CXX_COMPILER__TheGladiatorProject_Debug /Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/src/Gladiators/Swordsman.cpp || cmake_object_order_depends_target_TheGladiatorProject
+  DEP_FILE = src/CMakeFiles/TheGladiatorProject.dir/Gladiators/Swordsman.cpp.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -mmacosx-version-min=10.15 -std=gnu++14
+  INCLUDES = -I/Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/src -I/Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/src/Gladiators -I/Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/src/SpecialWeaponEffects
+  OBJECT_DIR = src/CMakeFiles/TheGladiatorProject.dir
+  OBJECT_FILE_DIR = src/CMakeFiles/TheGladiatorProject.dir/Gladiators
+
+build src/CMakeFiles/TheGladiatorProject.dir/SpecialWeaponEffects/Bleed.cpp.o: CXX_COMPILER__TheGladiatorProject_Debug /Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/src/SpecialWeaponEffects/Bleed.cpp || cmake_object_order_depends_target_TheGladiatorProject
+  DEP_FILE = src/CMakeFiles/TheGladiatorProject.dir/SpecialWeaponEffects/Bleed.cpp.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -mmacosx-version-min=10.15 -std=gnu++14
+  INCLUDES = -I/Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/src -I/Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/src/Gladiators -I/Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/src/SpecialWeaponEffects
+  OBJECT_DIR = src/CMakeFiles/TheGladiatorProject.dir
+  OBJECT_FILE_DIR = src/CMakeFiles/TheGladiatorProject.dir/SpecialWeaponEffects
+
+build src/CMakeFiles/TheGladiatorProject.dir/SpecialWeaponEffects/Paralyze.cpp.o: CXX_COMPILER__TheGladiatorProject_Debug /Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/src/SpecialWeaponEffects/Paralyze.cpp || cmake_object_order_depends_target_TheGladiatorProject
+  DEP_FILE = src/CMakeFiles/TheGladiatorProject.dir/SpecialWeaponEffects/Paralyze.cpp.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -mmacosx-version-min=10.15 -std=gnu++14
+  INCLUDES = -I/Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/src -I/Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/src/Gladiators -I/Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/src/SpecialWeaponEffects
+  OBJECT_DIR = src/CMakeFiles/TheGladiatorProject.dir
+  OBJECT_FILE_DIR = src/CMakeFiles/TheGladiatorProject.dir/SpecialWeaponEffects
+
+build src/CMakeFiles/TheGladiatorProject.dir/SpecialWeaponEffects/Poison.cpp.o: CXX_COMPILER__TheGladiatorProject_Debug /Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/src/SpecialWeaponEffects/Poison.cpp || cmake_object_order_depends_target_TheGladiatorProject
+  DEP_FILE = src/CMakeFiles/TheGladiatorProject.dir/SpecialWeaponEffects/Poison.cpp.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -mmacosx-version-min=10.15 -std=gnu++14
+  INCLUDES = -I/Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/src -I/Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/src/Gladiators -I/Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/src/SpecialWeaponEffects
+  OBJECT_DIR = src/CMakeFiles/TheGladiatorProject.dir
+  OBJECT_FILE_DIR = src/CMakeFiles/TheGladiatorProject.dir/SpecialWeaponEffects
+
+build src/CMakeFiles/TheGladiatorProject.dir/SpecialWeaponEffects/SpecialWeaponEffect.cpp.o: CXX_COMPILER__TheGladiatorProject_Debug /Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/src/SpecialWeaponEffects/SpecialWeaponEffect.cpp || cmake_object_order_depends_target_TheGladiatorProject
+  DEP_FILE = src/CMakeFiles/TheGladiatorProject.dir/SpecialWeaponEffects/SpecialWeaponEffect.cpp.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -mmacosx-version-min=10.15 -std=gnu++14
+  INCLUDES = -I/Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/src -I/Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/src/Gladiators -I/Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/src/SpecialWeaponEffects
+  OBJECT_DIR = src/CMakeFiles/TheGladiatorProject.dir
+  OBJECT_FILE_DIR = src/CMakeFiles/TheGladiatorProject.dir/SpecialWeaponEffects
+
+build src/CMakeFiles/TheGladiatorProject.dir/Utils.cpp.o: CXX_COMPILER__TheGladiatorProject_Debug /Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/src/Utils.cpp || cmake_object_order_depends_target_TheGladiatorProject
+  DEP_FILE = src/CMakeFiles/TheGladiatorProject.dir/Utils.cpp.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -mmacosx-version-min=10.15 -std=gnu++14
+  INCLUDES = -I/Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/src -I/Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/src/Gladiators -I/Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/src/SpecialWeaponEffects
+  OBJECT_DIR = src/CMakeFiles/TheGladiatorProject.dir
+  OBJECT_FILE_DIR = src/CMakeFiles/TheGladiatorProject.dir
+
+build src/CMakeFiles/TheGladiatorProject.dir/Tournament.cpp.o: CXX_COMPILER__TheGladiatorProject_Debug /Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/src/Tournament.cpp || cmake_object_order_depends_target_TheGladiatorProject
+  DEP_FILE = src/CMakeFiles/TheGladiatorProject.dir/Tournament.cpp.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -mmacosx-version-min=10.15 -std=gnu++14
+  INCLUDES = -I/Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/src -I/Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/src/Gladiators -I/Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/src/SpecialWeaponEffects
+  OBJECT_DIR = src/CMakeFiles/TheGladiatorProject.dir
+  OBJECT_FILE_DIR = src/CMakeFiles/TheGladiatorProject.dir
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target TheGladiatorProject
+
+
+#############################################
+# Link the executable src/TheGladiatorProject
+
+build src/TheGladiatorProject: CXX_EXECUTABLE_LINKER__TheGladiatorProject_Debug src/CMakeFiles/TheGladiatorProject.dir/main.cpp.o src/CMakeFiles/TheGladiatorProject.dir/Gladiators/StatisticMultiplier.cpp.o src/CMakeFiles/TheGladiatorProject.dir/Combat.cpp.o src/CMakeFiles/TheGladiatorProject.dir/GladiatorFactory.cpp.o src/CMakeFiles/TheGladiatorProject.dir/Gladiators/Archer.cpp.o src/CMakeFiles/TheGladiatorProject.dir/Gladiators/Assassin.cpp.o src/CMakeFiles/TheGladiatorProject.dir/Gladiators/BaseGladiator.cpp.o src/CMakeFiles/TheGladiatorProject.dir/Gladiators/Brutal.cpp.o src/CMakeFiles/TheGladiatorProject.dir/Gladiators/Swordsman.cpp.o src/CMakeFiles/TheGladiatorProject.dir/SpecialWeaponEffects/Bleed.cpp.o src/CMakeFiles/TheGladiatorProject.dir/SpecialWeaponEffects/Paralyze.cpp.o src/CMakeFiles/TheGladiatorProject.dir/SpecialWeaponEffects/Poison.cpp.o src/CMakeFiles/TheGladiatorProject.dir/SpecialWeaponEffects/SpecialWeaponEffect.cpp.o src/CMakeFiles/TheGladiatorProject.dir/Utils.cpp.o src/CMakeFiles/TheGladiatorProject.dir/Tournament.cpp.o
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -mmacosx-version-min=10.15
+  OBJECT_DIR = src/CMakeFiles/TheGladiatorProject.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = src/TheGladiatorProject
+  TARGET_PDB = TheGladiatorProject.dbg
+
+# =============================================================================
 # Write statements declared in CMakeLists.txt:
 # /Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/CMakeLists.txt
 # =============================================================================
@@ -859,6 +989,8 @@ build CombatTest: phony test/CombatTest
 
 build GladiatorFactoryTest: phony test/GladiatorFactoryTest
 
+build TheGladiatorProject: phony src/TheGladiatorProject
+
 build TournamentTest: phony test/TournamentTest
 
 build UtilsTest: phony test/UtilsTest
@@ -915,7 +1047,7 @@ build _deps/googletest-build/googletest/all: phony lib/libgtest_maind.a lib/libg
 #############################################
 # Folder: /Users/alexseres/OwnCplusPlusProjects/TheGladiatorProject/cmake-build-debug/src
 
-build src/all: phony
+build src/all: phony src/TheGladiatorProject
 
 # =============================================================================
 

@@ -5,6 +5,7 @@
 #include "Utils.h"
 #include "iostream"
 #include <fstream>
+
 using namespace std;
 
 const int Utils::getRandomNumber(int max) {

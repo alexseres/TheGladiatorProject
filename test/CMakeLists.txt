@@ -33,14 +33,3 @@ add_test(NAME TournamentTest COMMAND fillGladiatorsTest simulateTest sliceVector
 add_test(NAME CombatTest COMMAND simulateCombatTest turnTest announceWinnerTest checkIfIsWeaponizedTest checkIfIsParalyzedTest isUsingWeaponTest)
 
 
-#include(GoogleTest)
-#gtest_discover_tests(
-#    BaseGladiatorTest
-#    UtilsTest
-#)
-
-# the above config enables testing in CMake, declares the c++ test binary you want to build (BaseGladiator/test)
-# and links it to GoogleTest (gtest_main). The last two lines enable Cmake's test runner to discover the tests
-# included in the binary, using the GoogleTest CMake module
-
-
