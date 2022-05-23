@@ -38,9 +38,9 @@ to work in the terminal.
     - There is a `Swordsman` subclass of `BaseGladiator`. Its multipliers are: HP: medium, SP: medium, DEX: medium
     - There is an `Archer` subclass of `BaseGladiator`. Its multipliers are: HP: medium, SP: medium, DEX: high.
     - There is an `Assassin` subclass of `BaseGladiator`. Its multipliers are: HP: low, SP: high, DEX: high.
-    - There is a `Brutal` subclass of `VaseGladiator`. Its multipliers are: HP: high, SP: high, DEX: low.
+    - There is a `Brutal` subclass of `BaseGladiator`. Its multipliers are: HP: high, SP: high, DEX: low.
 
-2. Implement the `GladiatorFactory` class for creating `Gladiator` instances.
+2. Implement the `GladiatorFactory` class for creating `BaseGladiator` instances.
     - The `GenerateRandomGladiator()` method randomly generates a new instance for one of the implemented subclasses of `BaseGladiator`. The `Swordsman` subclass is twice as likely to be created than any other subclass.
     - HP, SP and DEX base statistics are assigned to a random value from range `[25-100]`, and LVL is assigned to a random value from range `[1-5]`.
     - Only one static Random object is used for randomization throughout the whole project.
@@ -84,9 +84,8 @@ Swordsman Jupiter has died, Brutal Nero wins!
 
 
 5. [OPTIONAL] Implement a weapon effect system that can cause additional damage or other advantages during combat.
-    - When creating a `Gladiator`, there is a 50% chance that he is granted a special weapon effect. The effect is randomly chosen from the ones mentioned below. The special weapon effects are displayed in the detailed view of the gladiator when announcing the combats.
+    - When creating a `BaseGladiator`, there is a 50% chance that he is granted a special weapon effect. The effect is randomly chosen from the ones mentioned below. The special weapon effects are displayed in the detailed view of the gladiator when announcing the combats.
     - Bleeding – there is a 5% chance that upon receiving a hit, the enemy starts bleeding and receives additional damage in each turn (2% of his available HP per turn) until the end of the combat. There can be "multiple bleedings" at the same time with cumulative effects.
     - Poison – there is a 20% chance that upon receiving a hit, the enemy gets poisoned and receives additional damage for the next three turns (5% of his available HP per turn). If poisoned again, the receiver immediately dies.
-    - Burning – there is a 15% chance that upon receiving a hit, the enemy is set on fire and receives additional damage for a random number of turns (in range `[1-5]`) (5% of his available HP per turn). If set on fire again, the duration of burning is extended by a random amount of turns (in range `[1-5]`).
     - Paralyzing – there is a 10% chance that upon receiving a hit, the enemy is paralyzed, which makes him unable to attack or defend himself during the next three turns (effectively, this skips three attacks and deals three hits). If paralyzed again, the duration of the paralyzed state is reset to three turns
     - Using the weapon effect system you have implemented, create an effect of your own. Will it be freezing, magic, or something else? Be creative!
